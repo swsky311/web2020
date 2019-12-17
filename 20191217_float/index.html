@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		div.wrap{
+			width: 500px;background-color:skyblue;
+		}
+		div.left,
+		div.right{
+			width: 135px;height: 400px;
+			float: left;
+			_display:inline-block
+		}
+		div.left{background-color:pink;}
+		div.right{
+			background-color:blue;
+			_margin-left:-6px;
+		}
+		div.wrap:after{
+			content:"";
+			display: block;clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="left">view01</div>
+		<div class="right">view02</div>
+		
+	</div>
+	<div class="visual">
+		Lorem ipsum dolor sit amet. 
+	</div>
+</body>
+</html>
+

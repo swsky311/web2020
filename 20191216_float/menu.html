@@ -1,60 +1,84 @@
 <!DOCTYPE html>
 <html lang="kor">
+
 <head>
 	<meta charset="UTF-8">
 	<title>float menu</title>
 	<style>
 		/*reset*/
-		*{margin: 0;padding: 0;}
-		li{list-style: none}
-		a:visited,a:link{
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none
+		}
+
+		a:visited,
+		a:link {
 			text-decoration: none;
-		color:#000
+			color: #000
 		}
-		
+
 		/*header*/
-		
-		div#header{
-			width:1200px;
+
+		div#header {
+			width: 1200px;
 			background-color: skyblue;
-			margin:0 auto;
+			margin: 0 auto;
 		}
-	
-				div#header>h1{
+
+		div#header>h1 {
 			width: 100px;
-		background-color: #f00;
-			margin: 0 auto;text-align: center;
+			background-color: #f00;
+			margin: 0 auto;
+			text-align: center;
 		}
-		div.nav>ul:after{
-			content: "";clear: both;display: block;
+
+		div.nav>ul:after {
+			content: "";
+			clear: both;
+			display: block;
 		}
-		div.nav>ul>li{
-			float: left;width: 240px;text-align: center;
-			height: 40px;line-height: 40px;
+
+		div.nav>ul>li {
+			float: left;
+			width: 240px;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
 			background-color: #00f;
-			color:#fff
+			color: #fff
 		}
-		div.nav>ul>li:hover{background-color:skyblue;}
-		div.visual{
+
+		div.nav>ul>li:hover {
+			background-color: skyblue;
+		}
+
+		div.visual {
 			height: 400px;
 			background-color: pink;
 		}
+
 	</style>
 </head>
+
 <body>
 	<div id="header">
 		<h1>logo</h1>
 		<div class="nav">
-		<ul>
-			<li>menu1</li>
-			<li>menu2</li>
-			<li>menu3</li>
-			<li>menu4</li>
-			<li>menu5</li>
-		</ul>
+			<ul>
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
 
 		</div>
 	</div>
 	<div class="visual"></div>
 </body>
+
 </html>
