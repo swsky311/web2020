@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>position</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		div.view{background-color: #f00;}
+		#header{
+			width: 1000px;height: 50px;background-color:skyblue;
+			margin:0 auto;position:relative;margin-top:10px;margin-bottom: 10px;
+		}
+		#header>h1{width:120px;height: 50px;line-height:50px;background-color: #fff;text-align: center;}
+		#header>nav.nav{
+			width: 600px;height: 50px;
+			background-color: #f00;
+			position:absolute;bottom:0;right:0;
+		}
+		#header>nav.nav>ul{}
+		#header>nav.nav>ul>li{float: left;width: 100px;}
+		#header>nav.nav>ul>li>a{
+			display:block;text-align: center;
+			line-height:50px;color:white;font-weight:bold;
+			height:50px;
+		}
+		#header>nav.nav>ul>li>a:hover{background-color:orange;}
+		div.slider img{width: 100%;}
+		div.visual{width: 1000px;margin:0 auto;}
+		.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0px none;
+    background: #fff;
+	}
+	div.box{
+		width: 200px;height: 200px;
+		background-color:skyblue;
+		position:absolute;left:100px;top:100px;
+		z-index:2;
+	}
+	div.box1{
+		width: 200px;height: 200px;
+		background-color:red;
+		position:absolute;left:150px;top:150px;
+		z-index:1;
+	}
+	div.boxWrap{
+		position: relative;
+		background-color: #00f;
+		height: 200px;
+	}
+	
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		});
+	</script>
+</head>
+<body>
+	<!-- <div class="box"></div>
+	<div class="view">test</div> -->
+
+	<div id="header">
+		<h1>LOGO</h1>
+		<nav class="nav">
+			
+			<ul>
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+				<li><a href="#">menu6</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="visual">
+		<div class="slider">
+			<div><img src="../images/pc01.jpg" alt=""></div>
+			<div><img src="../images/pc02.jpg" alt=""></div>
+			<div><img src="../images/pc03.jpg" alt=""></div>
+		</div>
+	</div>
+
+	<div class="boxWrap">
+		<div class="box"></div>
+		<div class="box1"></div>
+	</div>
+	
+</body>
+</html>
