@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		#header{
+			width:1000px;height: 100px;background-color:skyblue;
+			margin: 0 auto;
+			position: relative;
+		}
+		#header>h1{width:100px;position: absolute;left:50%;margin-left:-50px;background-color: #f00;text-align: center;top:10px;}
+		
+		#header>div.utilMenu1{width:200px;height: 40px;background-color: #00f;position: absolute;left:10px;top:10px;}
+		#header>div.utilMenu2{width:200px;height: 40px;background-color: #00f;position: absolute;right: 10px;top: 10px;}
+		#header>nav.navWrap{
+			background-color: #ff0;position: absolute;
+			bottom:0;width: 100%;
+		}
+		#header>nav.navWrap>ul{}
+		#header>nav.navWrap>ul>li{
+			box-sizing:border-box;
+			float: left;width:200px;height: 40px;
+			border-right: 1px solid #000;
+		}
+		/*#header>nav.navWrap>ul>li:last-child{border-right:none;}*/
+		#header>nav.navWrap>ul>li:first-child{border-left: 1px solid #000;}
+		#header>nav.navWrap>ul>li>a{display: block;line-height:40px;text-align: center;}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>logo</h1>
+		<div class="utilMenu1">utilmenu1</div>
+		<div class="utilMenu2">utilmenu2</div>
+		<nav class="navWrap">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
