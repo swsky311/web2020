@@ -1,9 +1,11 @@
 @charset "utf-8";
-header#main_header{background-color:skyblue;}
-header#main_header>div.main_util{border-bottom: 1px solid #000;}
+
+/*header start*/
+header#main_header{_background-color:skyblue;}
+header#main_header>div.main_util{border-bottom: 1px solid #ddd;}
 header#main_header>div.main_util>nav.util_menu{
 	width: 980px;margin: 0 auto;
-	background-color:pink;
+	_background-color:pink;
 }
 nav.util_menu>ul{float: right;_width:300px;}
 nav.util_menu>ul>li{float: left;position: relative;}
@@ -15,16 +17,16 @@ nav.util_menu>ul>li:after{
 	content:"";display: block;width:1px;height:10px;background-color: #f00;
 	position: absolute;top:10px;
 }
-/*nav.util_menu>ul>li:first-child:after{
+nav.util_menu>ul>li:first-child:after{
 	content:"";display: none;
-}*/
+}
 
-nav.util_menu>ul>li:last-child:before{
+/*nav.util_menu>ul>li:last-child:before{
 	content:"";display: block;width: 1px;height: 10px;background-color:#f00;
 	position: absolute;top:10px;right:0;
-}
+}*/
 header#main_header>div.main_middle{
-	width: 980px;height: 70px;margin: 0 auto;background-color: #eee;
+	width: 980px;height: 70px;margin: 0 auto;_background-color: #eee;
 	position: relative;padding-top:11px;
 }
 header#main_header>div.main_middle>h1{
@@ -40,4 +42,96 @@ header#main_header>div.main_bottom>nav.main_gnb{
 	width: 980px;_background-color:gray;margin: 0 auto;
 }
 nav.main_gnb>ul{}
-nav.main_gnb>ul>li{float: left;}
+nav.main_gnb>ul>li{
+	float: left;_width: 16.66%;width: 163.33px;
+	border-right: 1px solid #2867ad;
+}
+nav.main_gnb>ul>li:first-child{border-left: 1px solid #2867ad;}
+nav.main_gnb>ul>li>a{
+	display: block;text-align: center;line-height:45px;
+	color:#fff;font-weight:bold;
+}
+
+/*header end*/
+
+/*visual start*/
+div.visual_wrap{
+	background:#2a4778 url(../images/visual_bg01.jpg) no-repeat center;
+	height:400px;
+}
+div.visual_wrap>div.visual{
+	width: 980px;height: 400px;
+	margin:0 auto;position: relative;
+	overflow:hidden;
+}
+div.visual_wrap>div.visual>img{position: absolute;}
+div.visual_wrap>div.visual>img.visual_text{top:80px;}
+div.visual_wrap>div.visual>img.visual_img{right:30px;top:40px;}
+
+/*visual end*/
+
+/*section start*/
+section#container_wrap{
+	background-color: #ccc;
+	margin-bottom:30px;
+}
+section#container_wrap>div.container{
+	width: 980px;height: 196px;margin: 0 auto}
+
+section#container_wrap>div.container img{
+	display: block;
+	margin:0 auto;margin-bottom:10px;
+}
+section#container_wrap>div.container li{
+	float: left;width: 196px;height:196px;text-align: center;
+	color:white;cursor:pointer;
+}
+section#container_wrap>div.container div.icon{
+	padding-top:15px;
+}
+section#container_wrap>div.container div.icon h3{margin-bottom:8px;}
+section#container_wrap>div.container div.icon p{font-size:0.7em;}
+
+
+section#container_wrap>div.container li:nth-child(1){background-color: #7c99b9;}
+section#container_wrap>div.container li:nth-child(2){background-color: #4f74a1;}
+section#container_wrap>div.container li:nth-child(3){background-color: #488ce0;}
+section#container_wrap>div.container li:nth-child(4){background-color: #3db5f2;}
+section#container_wrap>div.container li:nth-child(5){background-color: #95c8ff;}
+/*section end*/
+
+/*article start*/
+article#container{width: 980px;margin: 0 auto;margin-bottom: 25px}
+article#container li{
+	float: left;width:310px;margin-right:25px;
+}
+article#container li:last-child{margin-right: 0;}
+
+article#container li div.card_body{
+	padding:15px;
+	border: 1px solid #ccc;
+	border-top:0 none;
+}
+article#container img{display: block;}
+/*article end*/
+
+
+article#containerOne{width: 980px;margin: 0 auto}
+article#containerOne li{
+	float: left;width:310px;height: 165px;
+	margin-right:25px;
+	border: 1px solid #ccc;position: relative;
+	overflow: hidden;
+}
+article#containerOne li:last-child{margin-right: 0;}
+
+article#containerOne li div.card_body{
+	position: relative;
+	padding:15px;
+	width:180px;
+	
+}
+article#containerOne img{display: block;position: absolute;right:-20px;top:10px;}
+article#containerOne div.card_body h3{margin-bottom: 10px}
+article#containerOne div.card_body p{margin-bottom: 10px}
+article#containerOne div.card_body a{color: #4c8ddd;font-size: 0.8em}

@@ -1,38 +1,29 @@
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>float menu</title>
+	<title>float</title>
 	<style>
-
-		*{margin:0px; padding: 0px;}
-		li {list-style: none}
-		a:visited,a:link{text-decoration: none; color: #000;}
-
-		div#header{width: 1200px;background-color: skyblue;margin: 0 auto;}
-		div#header>h1{width: 100px;background-color: #f00; margin: 0 auto;text-align: center;}
-		div.nav>ul{}
-		div.nav>ul>li{float: left; width: 240px;text-align: center;background-color: #00f;color: #fff;height: 40px;line-height: 40px;}
-		div.nav>ul>li:hover {background-color: skybule;}
-		div.visual {height: 400px; background-color: pink;}
-
-
+		div.container{background-color:skyblue;}
+		div img{
+			width: 200px;display: block;
+			float: left;
+		}
+		div.container:after{
+			content:"";display: block;clear: both;
+		}
+		
 	</style>
 </head>
 <body>
-	<div id="header">
-		<h1>logo</h1>
-		<div class="nav">
-		<ul>
-			<li>menu1</li>
-			<li>menu2</li>
-			<li>menu3</li>
-			<li>menu4</li>
-			<li>menu5</li>
-		</ul>
-		</div>
-	</div>
-<div class="visual"></div>
+<div class="container">
+
+	<img src="../images/testimg01.jpg" alt="">
+	<img src="../images/testimg01.jpg" alt="">
+	<img src="../images/testimg01.jpg" alt="">
+	
+</div>
+<div>Lorem ipsum dolor sit amet.</div>
 
 </body>
 </html>

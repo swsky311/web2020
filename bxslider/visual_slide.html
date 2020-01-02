@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>visual</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				// mode:"vertical",
+				pagerCustom:".bx-pager"
+			});
+		});
+	</script>
+	<style>
+		.wrapper{width: 900px;margin: 0 auto;position: relative;}
+		.bx-wrapper {
+	    -moz-box-shadow: 0 none;
+	    -webkit-box-shadow: 0 none;
+	    box-shadow: 0 none;
+	    border: 0 none;
+	    margin-bottom:0;
+		}
+		
+		
+		}
+		.slider_pager a.active{
+			background-color:darkblue;color:white;
+		}
+		.sliderWrap li .txtWrap{
+			position: absolute;top:90px;right:50px;
+			width:400px;color:white;
+		}
+		.sliderWrap li .txtWrap h2{
+			font-size:1.8em;margin-bottom:15px;
+		}
+		.sliderWrap li .txtWrap h2:after{
+			content:"";width: 300px;height: 2px;background-color:orange;
+			display: block;margin-top: 15px;
+		}
+		.sliderWrap li .txtWrap p{margin-bottom:15px;}
+		.sliderWrap li .txtWrap a.btn{
+			display: block;width:200px;line-height: 40px;text-align: center;
+			background-color:rgba(0,0,0,0.3);border: 1px solid #fff;
+			border-radius:20px;font-weight:bold;
+		}
+		.sliderWrap li .txtWrap a.btn:hover{background-color:rgba(0,0,0,0)}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>사랑과 행복을 나누는 마음1</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, architecto?</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>사랑과 행복을 나누는 마음2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, architecto?</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>사랑과 행복을 나누는 마음3</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, architecto?</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>사랑과 행복을 나누는 마음4</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, architecto?</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<div class="slider_pager">
+			<div class="bx-pager clearfix">
+				<a href="#" data-slide-index="0">menu1</a>
+				<a href="#" data-slide-index="1">menu2</a>
+				<a href="#" data-slide-index="2">menu3</a>
+				<a href="#" data-slide-index="3">menu4</a>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

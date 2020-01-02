@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>sprite images</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		div.header{width: 1000px;_background-color:skyblue;margin: 0 auto}
+		div.header>h1{
+			width: 125px;height: 30px;margin: 0 auto;
+			_background-color:pink;
+			background-image: url(../images/naver.png);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+		}
+		div.header>h1>a{
+			display: block;text-indent:-9999px;
+			line-height:30px;
+		}
+		div.header>nav.nav{background-color:yellow;}
+		div.header>nav.nav>ul{padding:10px;}
+		div.header>nav.nav>ul>li{
+			float: left;
+			background-image: url(../images/naver.png);
+		}
+		div.header>nav.nav>ul>li>a{
+			display: block;text-indent:-9999px;
+		}
+		div.header>nav.nav>ul>li:nth-child(1){
+			width:70px;height: 20px;_background-color:red;
+			background-position: 0 -30px;transition:0.3s;
+		}
+		div.header>nav.nav>ul>li:nth-child(2){
+			width:57px;height: 20px;_background-color:red;
+			background-position: -123px -24px;
+		}
+		div.header>nav.nav>ul>li:nth-child(1):hover{
+			background-position: 0 -53px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1><a href="#">네이버</a></h1>
+		<nav class="nav">
+			<ul class="clearfix">
+				<li><a href="#">실시간검색</a></li>
+				<li><a href="#">지식백과</a></li>
+			</ul>
+		</nav>
+
+
+	</div>
+</body>
+</html>
