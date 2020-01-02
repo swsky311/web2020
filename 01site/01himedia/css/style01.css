@@ -1,0 +1,6 @@
+@charset "utf-8"
+
+/* hearder start */
+header#main_header{background-color:skyblue;}
+header#main_header>div.main_util1{border-bottom: 1px solid #ddd;}
+header#main_header>div.main_util1>nav.util1_menu{width: 980px;}
