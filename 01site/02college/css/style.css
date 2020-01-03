@@ -9,13 +9,14 @@ header#main_header>div.main_util>nav.util_menu01{float: right;}
 
 nav.util_menu>ul{}
 nav.util_menu>ul>li{float:left;}
-nav.util_menu>ul>li>a{display: block;line-height: 50px;text-align: center;
-	padding:0 20px;background-color: #000;color:white;}
+nav.util_menu>ul>li>a{display: block;line-height: 50px;padding:0 20px;
+					background-color: #000;color:white;}
 
 
 nav.util_menu01>ul{}
 nav.util_menu01>ul>li{float:right;}
-nav.util_menu01>ul>li>a{display: block;line-height: 50px;text-align: center;
-	color:white;}
+nav.util_menu01>ul>li>a{display: block;line-height: 50px;color:white;}
+
+.
 
 
