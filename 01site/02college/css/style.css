@@ -1,0 +1,21 @@
+@charset "utf-8"
+
+/* hearder start */
+header#main_header{width: 100%;height: 50px;background-color:skyblue;}
+header#main_header>div.main_util{width: 1200px;margin: 0 auto;
+	background-color:pink;}
+header#main_header>div.main_util>nav.util_menu{float: left;}
+header#main_header>div.main_util>nav.util_menu01{float: right;}
+
+nav.util_menu>ul{}
+nav.util_menu>ul>li{float:left;}
+nav.util_menu>ul>li>a{display: block;line-height: 50px;text-align: center;
+	padding:0 20px;background-color: #000;color:white;}
+
+
+nav.util_menu01>ul{}
+nav.util_menu01>ul>li{float:right;}
+nav.util_menu01>ul>li>a{display: block;line-height: 50px;text-align: center;
+	color:white;}
+
+
