@@ -1,7 +1,7 @@
 @charset "utf-8"
 
 /* hearder start */
-header#main_header{width: 100%;background-color: skyblue;}
+header#main_header{width: 100%;display:block;background-color: skyblue;}
 header#main_header>div.main_util{width: 1200px;margin: 0 auto;
 	background-color:pink;}
 header#main_header>div.main_util>nav.util_menu{float: left;}
