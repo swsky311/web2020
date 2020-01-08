@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		li{list-style: none}
+		a:visited,a:link{
+			text-decoration:none;color:black;
+		}
+		.clearfix:after{
+			content:"";display: block;clear: both;
+		}
+		/*header start*/
+		div#header{width: 1000px;margin: 0 auto;background-color:skyblue;padding-top: 20px;}
+			
+		div#header>h1{width: 100px;background-color:white; text-align: center;margin: 0 auto; margin-bottom: 20px;}
+		div#header>ul.gnb:after{
+			content:"";display: block;clear: both;
+		}
+		div#header>ul.gnb>li{float: left;width: 166.66px;}
+		div#header>ul.gnb>li>a{background-color: #f00; display: block;text-align: center;color: white;font-weight: bold;line-height: 40px;}
+		div#header>ul.gnb>li>a:hover{background-color: orange;}
+		/*header end*/
+
+		/*visual*/
+		div.visual{height: 400px;background-color: pink;}
+		/*visual*/
+
+		/*container*/
+		div.container{width: 1000px;margin: 0 auto;
+			
+		}
+		div.container>h2{text-align: center;}
+		div.container>ul:after{
+			content:"";display: block;clear: both;}
+		div.container>ul>li{float: left;width: 242.5px;margin-right: 10px;}
+		div.container>ul>li:last-child{margin-right: 0;}
+		div.container>ul>li>img{width: 100%;display: block;}
+		
+		/*container*/
+
+		/*footer*/
+		div#footer{height: 100px;background-color: #000;}
+		/*footer*/
+
+		.pink{background-color:pink;}
+	</style>
+</head>
+<body>
+	<!-- header -->
+	<div id="header">
+		<h1>LOGO</h1>
+		<ul class="gnb clearfix">
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+		</ul>
+	</div>	
+	<!-- header -->
+
+	<!-- visual -->
+	<div class="visual">
+	<!-- visual -->
+
+	<!-- container -->
+	<div class="cintainer">
+		<h2>GALLERY</h2>
+		<ul>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<div class="container pink">
+		<div class="container">
+			<h3>REPORT</h3>
+			<ul>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container"></div>
+		<h4>NOTICE</h4>
+		<ul>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+		</ul>
+
+	<!-- footer -->
+	<div class="footer"></div>
+
+</body>
+</html>	

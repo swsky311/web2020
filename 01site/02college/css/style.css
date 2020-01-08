@@ -1,28 +1,18 @@
-@charset "utf-8"
+@charset "utf-8";
 
-/* hearder start */
-header#main_header{width: 100%;display:block;background-color: skyblue;}
-header#main_header>div.main_util{width: 1200px;margin: 0 auto;
-	background-color:pink;}
-header#main_header>div.main_util>nav.util_menu{float: left;}
-header#main_header>div.main_util>nav.util_menu>nav.util_menu01{float: right;}
+header#headerwrap{}
+div.main_header{background-color:#0044AF;}
+div.header{width: 1200px; margin: 0 auto;}
 
-nav.util_menu>ul{}
-nav.util_menu>ul>li{float:left;}
-nav.util_menu>ul>li>a{display: block;line-height: 30px;padding:0 20px;
-					background-color: #000;color:white;}
+div.main_util1{}
+div.main_util1>ul{}
+div.main_util1>ul>li{float: left;background-color: #00163b;margin-right: 5px;}
+div.main_util1>ul>li>a{display: block;width: 120px;height: 40px;color:#fff;text-align: center;
+line-height:40px;}
+div.main_util1>ul>li>a:hover{background-color:white;color:#000;}
 
-
-nav.util_menu01>ul{}
-nav.util_menu01>ul>li{float:right;}
-nav.util_menu01>ul>li>a{
-	background-color: skyblue;color:white;}
-
-div.header_logo{width: 500px;background-color:red;}
-h1{width: 300px;background-color: #000;color:white;}
-
-nav.util_menu02>ul{}
-nav.util_menu02>ul>li{float:right;}
-nav.util_menu02>ul>li>a{
-	background-color: pink;color:white;}
+div.main_util2{float: right;}
+div.main_util2>ul{}
+div.main_util2>ul>li{float: left;}
+div.main_util2>ul>li>a{}
 
