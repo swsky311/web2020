@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1><a href="#">naver</a></h1>
+		</div>
+		<div id="container">
+			<div id="content">
+				<h2 class="blind">네이버회원가입</h2>
+				<div class="join">
+					<form action="#" method="method">
+						<fieldset>
+							<legend>아이디,비밀번호</legend>
+							
+							<p class="field">
+								<label for="user-id" class="blind">아이디</label>
+								<input type="text" id="user-id" name="userid" placeholder="아이디입력" class="inp-field">
+								<span class="icon mail">@naver.com</span>
+							</p>
+							<p class="field">
+								<label for="user-pass" class="blind">비밀번호</label>
+								<input type="password" id="user-pass" name="userpass" placeholder="비밀번호" class="inp-field">
+								<span class="icon pass">비밀번호</span>
+							</p>
+							<p class="field">
+								<label for="user-pass2" class="blind">비밀번호 확인</label>
+								<input type="password" id="user-pass2" name="userpass2" placeholder="비밀번호 확인" class="inp-field">
+								<span class="icon pass2">비밀번호 확인</span>
+							</p>
+
+							
+						</fieldset>
+						<div class="btn-area">
+							<input type="submit" value="가입하기"  class="btn-submit">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

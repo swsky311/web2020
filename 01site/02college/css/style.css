@@ -2,17 +2,47 @@
 
 header#headerwrap{}
 div.main_header{background-color:#0044AF;}
-div.header{width: 1200px; margin: 0 auto;}
+div.header{width: 1200px;margin: 0 auto;}
 
-div.main_util1{}
+div.main_util1{float: left;}
 div.main_util1>ul{}
-div.main_util1>ul>li{float: left;background-color: #00163b;margin-right: 5px;}
-div.main_util1>ul>li>a{display: block;width: 120px;height: 40px;color:#fff;text-align: center;
+div.main_util1>ul.main_util1>li{float: left;background-color: #00163b;margin-right: 3px;}
+div.main_util1>ul.main_util1>li>a{display: block;width: 120px;height: 40px;color:#fff;text-align: center;
 line-height:40px;}
-div.main_util1>ul>li>a:hover{background-color:white;color:#000;}
+div.main_util1>ul.main_util1>li>a:hover{background-color:white;color:#000;}
 
 div.main_util2{float: right;}
 div.main_util2>ul{}
-div.main_util2>ul>li{float: left;}
-div.main_util2>ul>li>a{}
+div.main_util2>ul>li{float: left; margin-right: 10px;}
+div.main_util2>ul>li>a{width: 50px;height: 40px;color:white;text-align: center;line-height: 40px;}
 
+div.header1{width: 1200px;height: 114px;_background-color:skyblue;margin: 0 auto;}
+div.header1>h1{float: left;}
+div.header1>nav.header2{float: right;line-height: 114px;}
+nav.header2>ul>li{float: left;padding-right: 40px;}
+div.header1>ul>li>a{}
+
+div.header1>nav.header2>img{float: right;padding-top: 35px;}
+div.header1>nav.header2>ul{float: left;}
+
+div.containerwrap{background-image: url(../images/bg_dot.gif),url(../images/main_bg.jpg); height: 1300px;}
+div.container{width: 1200px; margin: 0 auto;}
+div.text{float: left; width: 680px;}
+div.text>p{/* width: 1200px; */color: white; font-size: 30px;}
+}
+div.text>p>span{float:left;font-size:50px;font-weight: bold;}
+
+div.menu>ul{float: right;width: 420px;}
+div.menu>ul>li{float: left;width: 100px; height: 115px;padding-bottom: 10px;}
+div.menu>ul>li>img{}
+div.menu>ul>li>img>p{color:white;}
+
+div.container_top{width: 1200px;height: 450px;background-color: #f00; margin: 0 auto;}
+div.container_top>ul{}
+div.container_top>ul>li{float: left;width: 75%;}
+
+div.container_middle{width: 1200px;height: 225px;background-color: #0f0;margin: 0 auto;}
+
+div.container_bottom{width: 1200px;height: 225px;background-color: #00f;margin: 0 auto;}
+
+div.container_bottom1{width: 1200px; height: 60px;background-color: pink;margin: 0 auto;margin-top: 20px;}
