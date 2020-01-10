@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>skin</title>
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+	.section{width: 1200px; margin: 0 auto; padding: 0 120px;}
+	/* section title */
+	.section .section_title{float: left;width: 187px;}
+	.section .section_title h3 {font-size: 20px; color: #333;margin-bottom: 14PX;}
+	.section .section_title a.more_btn{display: block;width: 23px;height: 23px;
+		background-image: url(images/more_btn.png);
+		background-repeat: no-repeat;
+		background-position: 0 -23px;
+		transition: 0.3s;}
+
+	.section .section_title a.more_btn:hover{background-position: 0 0;}	
+
+	/* section content */
+	.section .section_content{float: left;width: 773px;}
+	.news_list li{float: left;width: 205px;
+				padding:0 30px 0 30px;
+				border-left: 1px solid #dddedf;
+			}
+
+	.news_list li:first-child{border-left: 0 none;}
+	.news_list li h4{font-size: 20px;color:#56565e;line-height: 28px;
+		margin-bottom: 30px;}
+</style>
+<body>
+	<div class="section clearfix">
+		<div class="section_title">
+			<h3>뉴스룸</h3>
+			<a href="#" class="more_btn"></a>
+		</div>
+
+		<div class="section_content">
+			<ul class="news_list clearfix">
+				<li>
+					<a href="#">
+						<h4 class="news_title">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sunt.
+						</h4>
+						<span class="date">2020-01-10</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h4 class="news_title">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sunt.
+						</h4>
+						<span class="date">2020-01-10</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h4 class="news_title">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sunt.
+						</h4>
+						<span class="date">2020-01-10</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>
