@@ -25,12 +25,13 @@ div.header1>ul>li>a{}
 div.header1>nav.header2>img{float: right;padding-top: 35px;}
 div.header1>nav.header2>ul{float: left;}
 
-div.containerwrap{background-image: url(../images/bg_dot.gif),url(../images/main_bg.jpg); height: 1300px;}
+div.containerwrap{background-image: url(../images/bg_dot.gif),url(../images/main_bg.jpg); 
+	height: 1300px;}
 div.container{width: 1200px; margin: 0 auto;}
 div.text{float: left; width: 680px;}
 div.text>p{/* width: 1200px; */color: white; font-size: 30px;}
 }
-div.text>p>span{float:left;font-size:50px;font-weight: bold;}
+div.text>p>span{float: left; font-weight: bold;}
 
 div.menu>ul{float: right;width: 420px;}
 div.menu>ul>li{float: left;width: 100px; height: 115px;padding-bottom: 10px;}
