@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+header#headerwrap{background-color:skyblue;}
+
+div.header{width: 980px;height: 90px;margin: 0 auto;}
+div.header>div.header1>img>{float: left; width: 200px;height: 90px;}
+div.header>div.header1>img>h1>p{float:right;color: white;}
+div.header>div.header1>p{_color: white;}
+
+div.header_form{width: 290px;height: 30px;background-color: #f00;}
+
+div.main_util{float: left;}
+div.main_util>ul{float: right;}
+div.main_util>{}
