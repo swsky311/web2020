@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		nav.gnb{width: 1000px;margin: 0 auto;background-color:#ddd;}
+		.submenu{display: none;}
+		nav.gnb>ul>li{float: left;width: 20%;height: 40px;}
+		nav.gnb>ul>li>a{
+			display: block;text-align: center;
+			line-height:40px;
+		}
+		nav.gnb>ul>li:hover{background-color:skyblue;} 
+		/*세로1메뉴*/
+		/*nav.gnb>ul>li:hover .submenu{display: block;}
+		.submenu{background-color:skyblue;}*/
+		
+		 /*전체메뉴*/
+		nav.gnb>ul:hover .submenu{display: block;}
+		nav.gnb>ul>li:hover .submenu{background-color:skyblue;}
+		.submenu{background-color:#ddd;}
+		/*submenu*/
+		/*nav.gnb>ul>li:first-child .submenu{display: block;}*/
+		.submenu>li>a{display: block;text-align: center;line-height:35px;}
+		.submenu>li:hover{background-color:#eee;}
+		/* slider visual*/
+		.visual{height: 400px;background-color:pink;}
+	</style>
+</head>
+<body>
+	<!-- nav.gnb>ul.clearfix>li*5>(a[#]>{menu$})+(ul.submenu>li*4>a[#]>{sm0$}) -->
+
+	<nav class="gnb">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a>
+				<ul class="submenu">
+					<li><a href="#">sm0101</a></li>
+					<li><a href="#">sm0102</a></li>
+					<li><a href="#">sm0103</a></li>
+					<li><a href="#">sm0104</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<ul class="submenu">
+					<li><a href="#">sm0201</a></li>
+					<li><a href="#">sm0202</a></li>
+					<li><a href="#">sm0203</a></li>
+					<li><a href="#">sm0204</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+				<ul class="submenu">
+					<li><a href="#">sm0301</a></li>
+					<li><a href="#">sm0302</a></li>
+					<li><a href="#">sm0303</a></li>
+					<li><a href="#">sm0304</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu4</a>
+				<ul class="submenu">
+					<li><a href="#">sm0401</a></li>
+					<li><a href="#">sm0402</a></li>
+					<li><a href="#">sm0403</a></li>
+					<li><a href="#">sm0404</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu5</a>
+				<ul class="submenu">
+					<li><a href="#">sm0501</a></li>
+					<li><a href="#">sm0502</a></li>
+					<li><a href="#">sm0503</a></li>
+					<li><a href="#">sm0504</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual"></div>
+</body>
+</html>
