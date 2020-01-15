@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		li{list-style: none}
+		a:visited,a:link{
+			text-decoration:none;color:black;
+		}
+		.clearfix:after{
+			content:"";display: block;clear: both;
+		}
+
+		/* header */
+		div#header{width: 1000px; background-color:skyblue; margin: 0 auto;padding-top: 20px}
+		div#header>h1{
+			width: 100px;background-color: #fff;
+			margin:0 auto;text-align:center;
+			margin-bottom:20px;}
+
+		div#header>ul.gnb>li{float: left; width: 166.66px;}
+		div#header>ul.gnb>li>a{background-color: red; display: block;color:white;
+							text-align: center; line-height: 40px; font-weight: bold;}
+
+		div#header>ul.gnb>li>a:hover{background-color:orange;}
+
+		/* visual */	
+		div.visual{background-color:pink;height: 400px;margin-bottom:20px;} 
+
+		/* container */
+		div.container{width: 1000px;margin: 0 auto;margin-bottom: 20px;padding: 20px 0;}
+		div.container>h2{text-align: center;margin-bottom: 20px;}
+		div.container>ul:after{content:"";display: block;clear: both;}
+		div.container>ul>li{float: left; width: 242.5px;margin-right: 10px;}
+		div.container>ul>li:last-child{margin-right: 0;}
+		div.container>ul>li>img{width: 100%; display: block;}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>LOGO</h1>
+		<ul class="gnb clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+		</ul>
+	</div>
+	<div class="visual"></div>
+	<div class="container">
+		<h2>GALLERY</h2>
+		<ul>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<h3>REPORT</h3>
+		<ul>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<div class="cantainer">
+		<h3>NOTICE</h3>
+		<ul class="clearfix">
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
