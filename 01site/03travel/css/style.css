@@ -43,7 +43,7 @@ div.util02 p{float: left;
 		font-size: 18px;}
 div.util02 p span{font-weight: bold;}
 div.util02 img{float: left;
-			margin-right: 5px;}
+			margin-left: 6px;}
 div.down li{float: left;
 			height: 60px;}
 div.downwrap{background-color: #fff;}
@@ -58,5 +58,51 @@ div.down>ul>li>a{display: block;
 				line-height: 60px;
 				border-left: 1px solid #e9e9e9;}
 div.down>ul>li:last-child{
-				border-right: 1px solid #e9e9e9;}				
+				border-right: 1px solid #e9e9e9;}
 
+div#visual{width: 100%;height: 1500px;background-image: url(../images/main_bg.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: relative;
+			}				
+div#visual>img{position: absolute;
+					right: 350px;
+					top: 40px;
+					animation-name: myani;
+					animation-duration: 1s;
+					animation-iteration-count: infinite;
+					animation-direction:alternate;
+					animation-fill-mode: forwards;
+					animation-timing-function: linear;
+
+
+				}
+@keyframes myani {
+					0%{right:350px;top: 40px;}
+					100%{right: 350px; top: 70px;}
+				}				
+
+div.main_text{position: absolute; left: 53%; top: 40px; }
+div.main_text>h2{font-size: 65px;}
+div.main_text span{border-bottom: 4px solid #000;}				
+div.main_text>p{font-size:30px;margin-top: 10px;}
+
+div.visualwrap{width:980px;height: 1500px;position: absolute;left: 50%;
+			margin-left: -490px;_background-color: pink;
+			top: 50px;
+
+		}
+div.visualwrap div.first{width: 480px;height: 300px;background-color: #fff;margin-bottom: 15px;}
+div.visualwrap div.second{width: 480px;height: 240px; margin-bottom: 15px;}
+div.visualwrap div.second ul li{width: 233px;height: 240px;background-color: orange;
+								float: left; position: relative;}
+div.visualwrap div.second ul li:first-child{margin-right: 14px;}	
+div.visualwrap div.second ul li:nth-child(2) p:first-child {margin-right: 10px;}						
+div.visualwrap div.second ul li div.textwrap p{color: white;float: left; 
+												line-height: 48px;margin-right: 8px;margin-left: 15px;}
+div.visualwrap div.second ul li div.textwrap p:nth-child(2){color:#5ca45a}
+div.visualwrap div.second ul li div.textwrap{background-color: #152630;width: 233px;height: 48px;position: absolute;bottom: 0;}
+
+div.visualwrap div.third ul li div.textwrap01{width: 233px;height: 65px;background-color: #529351;position: absolute;bottom: 0;}
+div.visualwrap div.third ul li {position: relative;}
+div.visualwrap div.third ul li div.textwrap01 p {color: white;font-weight: bold;line-height: 48px;margin-left: 15px;}
