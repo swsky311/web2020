@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>shadow</title>
+	<style>
+		body{background-color: #000;}
+		div.blur{transition: .3s; color:white; font-weight: bold;}
+		div.blur:hover{text-shadow:3px 3px 5px red;} 
+
+		div.shadow{text-shadow: 0 0 5px white, -3px -3px 3px red; 
+			color: gray;}
+
+		div.box{width: 100px;height: 100px;margin: 0 auto; 
+				background-color: #fff; text-align: center;
+				line-height: 100px; _box-shadow: 5px 5px yellow;
+				transition: 0.3s;
+			}
+		div.box:hover{box-shadow: 5px 5px 5px yellow, -5px -5px 5px red;}
+	</style>
+</head>
+<body>
+	<div class="blur">drop shadow</div>
+	<div class="shadow">drop shadow</div>
+	<div class="box">box shadow</div>
+</body>
+</html>
