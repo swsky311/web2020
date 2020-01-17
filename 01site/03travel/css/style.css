@@ -143,7 +143,9 @@ div.footer>p{color:#808080;}
 
 
 
-div#subvisual{width: 100%;height: 300px;background-color: skyblue;}
-div#subvisual img{background-repeat: no-repeat;background-size: cover;}
+div#subvisual{width: 100%;height: 1000px;background-color: skyblue; }
+div#subvisual div.visualwrap{width: 100%;height: 500px; background-color: #00f;_background-image: url(../images/subimg01.png);
+							_background-repeat: no-repeat;_background-size: cover;}
 
-div.subvisual_menu{width: 100%;height: 30px;background-color: pink;}
+div#subvisual div.visualtext{width: 320px; height: 180px;background-color: #ff0; margin: 0 auto;_margin-top: 10px;}			
+
