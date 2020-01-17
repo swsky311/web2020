@@ -27,11 +27,21 @@ div.logo{float: left;
 		margin-right: 30px;}
 div.util01{width: 400px;
 		height: 40px;
-		background-color:white;
+		_background-color:white;
 		float: left;
 		margin-right: 50px;
 		margin-top: 30px;
 	}
+
+form{width: 300px;height: 30px;}	
+fieldset{display: block;border: 1px solid #000; border-radius: 30px;background-color: white;}
+legend{display: block;position: absolute;right: 0;top: -9999px;}
+input#search{width: 200px; border: none;}
+label{}
+
+
+p.field{width: 300px;height: 30px;padding-top: 3px;padding-left: 10px;}
+p.field>label{margin-right: 10px;}
 div.util02{width: 300px;
 		height: 40px;
 		_background-color:skyblue;
@@ -60,10 +70,11 @@ div.down>ul>li>a{display: block;
 div.down>ul>li:last-child{
 				border-right: 1px solid #e9e9e9;}
 
-div#visual{width: 100%;height: 1500px;background-image: url(../images/main_bg.jpg);
+div#visual{width: 100%;height: 1200px;background-image: url(../images/main_bg.jpg);
 				background-repeat: no-repeat;
 				background-size: cover;
 				position: relative;
+
 			}				
 div#visual>img{position: absolute;
 					right: 350px;
@@ -87,7 +98,7 @@ div.main_text>h2{font-size: 65px;}
 div.main_text span{border-bottom: 4px solid #000;}				
 div.main_text>p{font-size:30px;margin-top: 10px;}
 
-div.visualwrap{width:980px;height: 1500px;position: absolute;left: 50%;
+div.visualwrap{width:980px;height: 1200px;position: absolute;left: 50%;
 			margin-left: -490px;_background-color: pink;
 			top: 50px;
 
@@ -99,10 +110,40 @@ div.visualwrap div.second ul li{width: 233px;height: 240px;background-color: ora
 div.visualwrap div.second ul li:first-child{margin-right: 14px;}	
 div.visualwrap div.second ul li:nth-child(2) p:first-child {margin-right: 10px;}						
 div.visualwrap div.second ul li div.textwrap p{color: white;float: left; 
-												line-height: 48px;margin-right: 8px;margin-left: 15px;}
+												line-height: 48px;margin-right: 8px;
+												margin-left: 15px;}
 div.visualwrap div.second ul li div.textwrap p:nth-child(2){color:#5ca45a}
-div.visualwrap div.second ul li div.textwrap{background-color: #152630;width: 233px;height: 48px;position: absolute;bottom: 0;}
+div.visualwrap div.second ul li div.textwrap{background-color: #152630;width: 233px;
+											height: 48px;position: absolute;bottom: 0;}
 
-div.visualwrap div.third ul li div.textwrap01{width: 233px;height: 65px;background-color: #529351;position: absolute;bottom: 0;}
-div.visualwrap div.third ul li {position: relative;}
-div.visualwrap div.third ul li div.textwrap01 p {color: white;font-weight: bold;line-height: 48px;margin-left: 15px;}
+
+div.visualwrap div.third {margin-bottom: 15px;}
+div.visualwrap div.third ul li div.textwrap01{width: 233px;height: 65px;
+											background-color: #529351;position: absolute;
+											bottom: 0;padding-top: 10px;}
+div.visualwrap div.third ul li {position: relative; float: left; margin-right: 14px;}
+div.visualwrap div.third ul li:last-child{margin-right: 0;}
+div.visualwrap div.third ul li div.textwrap01 p {color: white;font-weight: bold;
+												margin-left: 15px;
+												margin-right: 8px;margin-bottom: 5px;}
+div.visualwrap div.third ul li div.textwrap01 img {display: block;margin-left: 15px;}
+
+
+div.visualwrap div.four {margin-bottom: 15px;}
+div.visualwrap div.four ul li {float: left; margin-right: 14px;}
+div.visualwrap div.four ul li:last-child{margin-right: 0;}
+
+div.footer{width: 980px;height: 115px; margin: 0 auto;background-color: white;}
+div.footer ul li{float: left; margin-right: 25px; font-size: 20px; padding-bottom: 10px;} 
+div.footer>p{color:#808080;}
+
+
+
+
+
+
+
+div#subvisual{width: 100%;height: 300px;background-color: skyblue;}
+div#subvisual img{background-repeat: no-repeat;background-size: cover;}
+
+div.subvisual_menu{width: 100%;height: 30px;background-color: pink;}
