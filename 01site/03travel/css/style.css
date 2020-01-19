@@ -97,7 +97,7 @@ div#visual>img{position: absolute;
 div.main_text{position: absolute; left: 53%; top: 40px; }
 div.main_text>h2{font-size: 65px;}
 div.main_text span{border-bottom: 4px solid #000;}				
-div.main_text>p{font-size:30px;margin-top: 10px;}
+div.main_text>p{font-size:25px;margin-top: 10px;}
 
 div.visualwrap{width:980px;height: 1200px;position: absolute;left: 50%;
 			margin-left: -490px;_background-color: pink;
@@ -124,8 +124,9 @@ div.visualwrap div.third ul li div.textwrap01{width: 233px;height: 65px;
 											bottom: 0;padding-top: 10px;}
 div.visualwrap div.third ul li {position: relative; float: left; margin-right: 14px;}
 div.visualwrap div.third ul li:last-child{margin-right: 0;}
-div.visualwrap div.third ul li div.textwrap01 p {color: white;font-weight: bold;
-												margin-left: 15px;
+
+div.visualwrap div.third ul li div.textwrap01 p {color: white;_font-weight: bold;
+												margin-left: 10px;
 												margin-right: 8px;margin-bottom: 5px;}
 div.visualwrap div.third ul li div.textwrap01 img {display: block;margin-left: 15px;}
 
@@ -144,11 +145,26 @@ div.footer>p{color:#808080;}
 
 
 
-div#subvisual{width: 100%;height: 290px;background-color: skyblue;}
+div#visualwrap{width: 100%;height: 1400px;background-color: #efefef;}
+div#visualwrap>div.visual{width: 100%;height: 290px;_background-color: #ff0;
+						background-image: url(../images/subimg02.png);
+						background-repeat: no-repeat; background-size: cover;
+						position: relative;}
 
-						
+div.visual_text{width: 385px;height: 100px;_background-color: #000;position: absolute; top:25%; left: 40%;}
+div.visual_text>h2{font-size: 50px;color: #fff;}				
+div.visual_text>p{font-size:13px;color: #fff;margin-left: 30px;} 						
 
-div.visualtext{width: 320px; height: 180px;background-color: #00f; margin: 0 auto; _margin-top: 10px;}			
 
-div.visualtext p span{border-bottom: 3px solid #fff; font-size: 50px; font-weight: bold; color:#fff}
-div.visualtext p {color:#fff; }
+
+div.visualimg{width: 980px;height: 915px;_background-color: #0f0; margin: 0 auto;} 
+
+
+div.visualimg img{margin-bottom: 10px;border-bottom: 4px solid #0e73a7;}
+
+
+
+
+
+
+div.footer{width: 980px;height: 115px; margin: 0 auto; background-color: #efefef;padding-top: 20px;}
