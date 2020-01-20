@@ -118,16 +118,21 @@ div.visualwrap div.second ul li div.textwrap{background-color: #152630;width: 23
 											height: 48px;position: absolute;bottom: 0;}
 
 
-div.visualwrap div.third {margin-bottom: 15px;}
+div.visualwrap div.third {margin-bottom: 15px;position: relative;}
+div.textup{width: 200px; height: 30px; _background-color: #f00; position: absolute; top: 20px; }
+div.textup p {font-size:20px;color: #fff;margin-left: 80px;}
 div.visualwrap div.third ul li div.textwrap01{width: 233px;height: 65px;
 											background-color: #529351;position: absolute;
 											bottom: 0;padding-top: 10px;}
+div.visualwrap div.third ul li div.textwrap01:nth-child(3){background-color: #262632;}											
 div.visualwrap div.third ul li {position: relative; float: left; margin-right: 14px;}
 div.visualwrap div.third ul li:last-child{margin-right: 0;}
 
+div.visualwrap div.third ul li div.textwrap01 h3 {}
 div.visualwrap div.third ul li div.textwrap01 p {color: white;_font-weight: bold;
 												margin-left: 10px;
 												margin-right: 8px;margin-bottom: 5px;}
+
 div.visualwrap div.third ul li div.textwrap01 img {display: block;margin-left: 15px;}
 
 
@@ -151,20 +156,18 @@ div#visualwrap>div.visual{width: 100%;height: 290px;_background-color: #ff0;
 						background-repeat: no-repeat; background-size: cover;
 						position: relative;}
 
-div.visual_text{width: 385px;height: 100px;_background-color: #000;position: absolute; top:25%; left: 40%;}
+div.visual_text{width: 385px;height: 100px;_background-color: #000;position: absolute; top:35%; left: 40%;}
 div.visual_text>h2{font-size: 50px;color: #fff;}				
 div.visual_text>p{font-size:13px;color: #fff;margin-left: 30px;} 						
 
 
-
-div.visualimg{width: 980px;height: 915px;_background-color: #0f0; margin: 0 auto;} 
-
-
-div.visualimg img{margin-bottom: 10px;border-bottom: 4px solid #0e73a7;}
+div#visualwrap{height: 1600px;}
+div.visualimg{width: 980px;height: 1300px;_background-color: #0f0; margin: 0 auto;position: relative;} 
 
 
+div.visualimg img{position: absolute;top: 230px;border-bottom: 4px solid #0e73a7;}
 
 
 
 
-div.footer{width: 980px;height: 115px; margin: 0 auto; background-color: #efefef;padding-top: 20px;}
+div.footer{width: 980px;height: 115px; margin: 0 auto; background-color: #efefef;_padding-top: 20px;}
