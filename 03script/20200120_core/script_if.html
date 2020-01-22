@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>if</title>
+</head>
+<body>
+	<h3>학점출력</h3>
+	<script>
+		var grade;
+		var score = prompt("한성용님 점수를 입력하세요.",100); /*prompt:창출력*/
+		//prompt() ---> window객체
+		console.log(score);
+		score = parseInt(score); //parseInt() --->number객체
+
+
+		/*if(score >= 90){
+			document.write("A입니다")  //참일때 출력 거짓일때 출력안됨
+		}else{
+			document.write("학점측정불가");
+		}*/
+
+
+
+		if(score >= 90){
+			grade = "A";
+		}else if(score >= 80){
+			grade = "B";
+		}else if(score >= 70){
+			grade = "C";
+		}else if(score >= 60){
+			grade = "D";
+		}else{
+			grade = "F";			
+		}
+		document.write(score + "는 " + grade + "입니다." );
+	</script>
+</body>
+</html>
