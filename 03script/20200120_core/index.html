@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>core</title>
+</head>
+<body>
+	<script>
+		function name(){
+			document.write("안녕하세요");
+		}
+		/*name();*/
+	</script>
+	<a href="#" onclick="name()">버튼</a>
+	<div style="height: 20px;background-color: red">
+		
+
+
+	<script>
+	/*name();*/
+	</script>
+	</div>
+
+
+
+	<script>
+		var x =100; //전역변수
+		var cite = "그녀는 \"누구세요\"라고 했습니다.<br>";
+		var cite1 = '그녀는 "누구세요"라고 했습니다.';
+		var hanHerf = "<a href=\"http://www.naver.com\">링크</a>";
+		function name(){
+			var y =200; //지역변수
+			var x = 300; //지역변수
+			document.write("지역변수 : " + y + "<br>");
+			var z; //지역변수
+			z = this.x+y; //전역변수x + 지역변수y
+			document.write("전체합계 : " + z );
+		}
+		name(); //실행
+
+		//document.write(y); //지역변수로 출력안됨
+		document.write(cite);
+		document.write(cite1);
+		document.write(hanHerf);
+	</script>
+
+	<p onmouseover="document.body.style.color='red'"
+	onmouseout="document.body.style.color='black'"
+	>테스트</p>
+	
+	<script>
+		function bodyColorOver(){
+			document.body.style.backgroundColor="skyblue";
+		}
+		function bodyColorOut(){
+			document.body.style.backgroundColor="white";
+		}
+	</script>
+
+
+	<div onmouseover="bodyColorOver()" onmouseout="bodyColorOut()">안녕하세요</div>
+
+
+</body>
+</html>

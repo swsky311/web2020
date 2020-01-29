@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>for</title> <!-- for문 반복문 -->
+</head>
+<body>
+	<script>
+		document.write(0);
+		document.write(1);
+		document.write(2);
+		document.write(3);
+		document.write(4);
+		document.write(5);
+		document.write(6);
+		document.write(7);
+		document.write(8);
+		document.write(9);
+
+
+		for(var i=1;i<11;i++){ //초기식 조건식 증감식(i=i+1)
+			document.write(i)
+		}
+
+
+	</script>
+
+	<h3>for문</h3>
+	<script>
+		for(var size=10;size<=35;size+=5){  //size=size+5
+			document.write("<span style='font-size:" + size + "px'>"+size); //태크 따옴표 font-size 격따옴표
+			document.write("</span>")
+		}
+	</script>
+	<br>
+	<h3>구구단</h3>
+	<script>
+		var dan = 7;
+		/*document.write(dan + " x 1 = " + dan*1 + "<br>");
+		document.write(dan + " x 2 = " + dan*2 + "<br>");
+		document.write(dan + " x 3 = " + dan*3 + "<br>");
+		document.write(dan + " x 4 = " + dan*4 + "<br>");
+		document.write(dan + " x 5 = " + dan*5 + "<br>");
+		document.write(dan + " x 6 = " + dan*6 + "<br>");
+		document.write(dan + " x 7 = " + dan*7 + "<br>");
+		document.write(dan + " x 8 = " + dan*8 + "<br>");
+		document.write(dan + " x 9 = " + dan*9 + "<br>");*/
+
+
+		for(var dan=1;dan<=9;dan++){
+
+		document.write(dan + "단<br>")
+		for(var i =1;i<=9;i++){ //i=i+1
+			document.write(dan+" x " + i + " = " + dan*i +"<br>");
+		}
+
+	}
+
+	</script>
+</body>
+</html>

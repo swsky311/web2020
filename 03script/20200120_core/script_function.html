@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>function</title> <!-- 함수 -->
+</head>
+<body>
+	<script>
+
+		function adder(a,b){
+			//var a = 10;
+			//var b = 20;
+			var sum = a + b;
+			document.write(sum);
+			return sum; //★값을 넘겨줌★
+		}
+
+		var n = adder(100,500); //return값을 받음
+		document.write(n); //출력
+		//adder(); 함수호출
+		
+	</script>
+	<br>
+	<script>
+		function dan(dan,size){
+			//var dan = 3;
+			document.write("<div style ='font-size:" + size + "px'>"+ dan + "단</div>")
+			for(var i=1;i<=9;i++){
+				document.write(dan + " x " + i + " = " + dan*i + "<br>");
+			}
+		}
+	</script>	
+	<style>
+		.box,.box1{float: left;width: 200px;}
+		.box{background-color: skyblue;}
+		.box1{background-color: yellow;}
+	</style>
+	<div class="box">
+		<script>dan(3,20);</script>
+	</div>
+	<div class="box1">
+		<script>dan(8,20);</script>
+	</div>
+
+</body>
+</html>
