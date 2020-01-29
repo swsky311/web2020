@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>array</title>
+	<script>
+		var city = ["Seoul", "Busan", "Inchon", "Mokpo", "Seojong"];
+		var cityNum = city.length; //length 인덱스 갯수 5개 (서울,부산,인천,목포,세종)
+		//alert(cityNum);
+		//document.write(cityNum);
+		//console.log(cityNum);
+		for(var i=0;i<cityNum;i++){
+			document.write(i+"번째 자료는 "+ city[i] + "입니다.<br>");
+
+		}
+
+		//document.write(city[0]+"<br>");
+		//document.write(city[1]+"<br>");
+		//document.write(city[2]+"<br>");
+
+	</script>
+	<script>
+		var city1 = ["서울","경기","부산","인천"];
+		console.log("city의 개수: " + city1.length);
+		function printArr(){
+			for(var i=0;i<city.length;i++){
+				document.write("배열데이터 ["+i+"] = " + city1[i] + "<br>");
+				/*document.write(i);  i=변수 (변수는 따옴표가 들어가지 않는다)*/
+
+			}
+		}
+		printArr(); //함수호출
+	</script>
+
+	<script>
+		var com = [95,75,0,65,0,60,99,48,76,55];
+		console.log("com count : " + com.length);
+		function printAvg(){
+			var sum = 0; 
+			var n = com.length;
+			for (var i=0;i<n;i++){
+				sum = sum + com[i]; // sum += com[i];
+			}
+			return (sum/n);
+		}
+
+	</script>
+</head>
+
+<body>
+	<div>
+		<script>
+			document.write(city1[0]); // 콘솔창 적용 city1[0]
+		</script>
+	</div>
+	<div>
+		<script>
+			document.write(city1[2]); // 콘솔창 적용 city1[2]
+		</script>
+	</div>
+
+
+	<div> 
+		수학의 평균 :
+		<script>
+			var	getAvg = printAvg(); // printAvg를 변수변환 var getAvg
+			document.write(getAvg)
+		</script>
+		점
+	</div>
+
+
+	<script>
+		var arrdata = [];  //3
+		function insertArr(){  //2
+			for(var i=0;i<100;i++){  //4
+				arrdata[i] = i+1;  //5
+			}
+			selectArr();  //10
+		}
+
+		function selectArr(){  //9
+			var num = arrdata.length;  //6
+			for(var k=0;k<num;k++){  //7
+				document.write(arrdata[k]+",");  //8
+			}
+			addArr();  //11
+		}
+
+		function addArr(){  //12
+			var sum = 0;  //15
+			for(var i=0;i<arrdata.length;i++){  //13
+				sum = sum + arrdata[i];  //14
+
+			}
+			document.write("<p> 배열데이터의 합 : "+sum+"</p>")  //16
+			document.write("<a href='script_array.html'>돌아가기</a>" )  //17
+		}
+	</script>
+	<button type="button" onclick="insertArr()">배열 생성/조회/연산</button>  <!-- 1 -->
+</body>
+</html>

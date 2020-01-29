@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://www.sogcorp.com/1_1.php -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>SOG컨설팅</title>
+<link rel="stylesheet" href="./SOG컨설팅_files/default.css">
+<!--[if lte IE 8]>
+<script src="http://www.sogcorp.com/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://www.sogcorp.com";
+var g5_bbs_url   = "http://www.sogcorp.com/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<script src="./SOG컨설팅_files/jquery-1.8.3.min.js.다운로드"></script>
+<script src="./SOG컨설팅_files/jquery.menu.js.다운로드"></script>
+<script src="./SOG컨설팅_files/common.js.다운로드"></script>
+<script src="./SOG컨설팅_files/wrest.js.다운로드"></script>
+<script src="./SOG컨설팅_files/jquery.bxslider.min.js.다운로드"></script>
+
+<link rel="stylesheet" type="text/css" href="./SOG컨설팅_files/jquery.bxslider.css">
+</head>
+<body>
+
+
+
+<style type="text/css">
+
+</style>
+
+<div class="header_wrap">
+	<div id="header" class="clearfix">
+		<h1 class="logo"><a href="http://www.sogcorp.com/"><img src="./SOG컨설팅_files/logo.png" alt=""></a></h1>
+
+		<div id="gnb">
+			<ul class="clearfix">
+				<li class="gnb01">
+					<a href="http://www.sogcorp.com/1_1.php" class="">회사소개</a>
+					<ul style="overflow: hidden; display: none; height: 155px; padding-top: 4px; margin-top: 0px; padding-bottom: 21px; margin-bottom: 0px;">
+						<li><a href="http://www.sogcorp.com/1_1.php">SOG 정신</a></li>
+						<li><a href="http://www.sogcorp.com/1_2.php">왜 SOG인가?</a></li>
+						<li><a href="http://www.sogcorp.com/1_3.php">조직도</a></li>
+						<li><a href="http://www.sogcorp.com/1_4.php">인재채용</a></li>
+						<li><a href="http://www.sogcorp.com/1_5.php">오시는 길</a></li>
+					</ul>
+				</li>
+				<li class="gnb02">
+					<a href="http://www.sogcorp.com/bbs/board.php?bo_table=01_board">기업교육컨설팅</a>
+					<ul>
+						<li><a href="http://www.sogcorp.com/bbs/board.php?bo_table=01_board">교육 실적</a></li>
+						<li><a href="http://www.sogcorp.com/2_2.php">교육 분야</a></li>
+						<li><a href="http://www.sogcorp.com/bbs/write.php?bo_table=02_board">제안서 요청하기</a></li>
+					</ul>
+				</li>
+				<li class="gnb03">
+					<a href="http://www.sogcorp.com/bbs/board.php?bo_table=03_board">PT교육&amp;컨설팅</a>
+					<ul>
+						<li><a href="http://www.sogcorp.com/bbs/board.php?bo_table=03_board">컨설팅 분야 및 실적</a></li>
+						<li><a href="http://www.sogcorp.com/3_2.php">컨설팅 절차</a></li>
+						<li><a href="http://www.sogcorp.com/bbs/write.php?bo_table=04_board">컨설팅 문의하기</a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.sogcorp.com/bbs/board.php?bo_table=05_board">뉴스</a></li>
+				<li><a href="http://www.sogcorp.com/bbs/write.php?bo_table=06_board">빠른문의</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="quick_menu" style="top: 415px;">
+	<ul>
+		<li><img src="./SOG컨설팅_files/quick_top.jpg" alt=""></li>
+		<li><a href="http://talk.naver.com/WC5424" target="_blank"><img src="./SOG컨설팅_files/quick_naver.jpg" alt=""></a></li>
+		<li><a href="http://pf.kakao.com/_rKgxfxd" target="_blank"><img src="./SOG컨설팅_files/quick_kakao.jpg" alt=""></a></li>
+		<li><img src="./SOG컨설팅_files/quick_call.jpg" alt=""></li>
+	</ul>
+</div>
+
+
+<script type="text/javascript">
+	$(function() {
+
+		//$("a").click(function(){alert("준비중입니다.");return false;})
+		
+		$("#gnb>ul>li").mouseenter(function(){
+			$(this).siblings().children("a").removeClass("on");
+			$(this).children("a").addClass("on");
+			$(this).children("ul").slideDown();
+		});
+
+		$("#gnb>ul>li").mouseleave(function(){
+			$(this).children("ul").stop().slideUp(function(){
+				//alert();
+				
+			});
+			$("#gnb>ul>li>a").removeClass("on");
+		});
+
+		$('#gnb>ul>li>a').click(function(slide){
+			var target = $($(this).attr('href'));
+			//if(target.length){
+				slide.preventDefault();
+				$('body').stop().animate({
+				   scrollTop:target.position().top 
+				},500);
+			//}
+			
+		});
+
+		var bn = "1_1.php";
+		var aa = 0;
+
+		if(bn=="index.php"){
+			aa = 880;
+			//$(".quick_menu").hide()
+		}else{
+			aa = 415;
+		}
+
+		var $w = $(window),
+			$qm = $('.quick_menu'),
+			quickMinTop = aa,
+			quickTopGap = 80,
+			quickTop = null,
+			currentTop = null;
+		
+		$qm.css('top', quickMinTop);
+
+		$w.scroll(function() {
+
+			currentTop = $w.scrollTop();
+
+			quickTop = Math.max(currentTop + quickTopGap, quickMinTop);
+
+			$qm.stop().animate({ 'top' : quickTop }, 500);
+		}).scroll();
+
+		/*$(window).scroll(function () {
+            if ($(this).scrollTop() > 100) { // 스크롤 내릴 표시
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
+        });*/
+                
+        $('.top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);  // 탑 이동 스크롤 속도
+            return false;
+        });
+
+	});
+</script>
+<div class="sv sv11">
+	<div class="stab">
+		<ul class="clearfix">
+			<li><a class="on" href="http://www.sogcorp.com/1_1.php">SOG 정신</a></li>
+			<li><a class="" href="http://www.sogcorp.com/1_2.php">왜 SOG인가?</a></li>
+			<li><a class="" href="http://www.sogcorp.com/1_3.php">조직도</a></li>
+			<li><a class="" href="http://www.sogcorp.com/1_4.php">인재채용</a></li>
+			<li><a class="" href="http://www.sogcorp.com/1_5.php">오시는 길</a></li>
+		</ul>
+	</div>	
+</div>
+<div class="sc">
+	<p><img src="./SOG컨설팅_files/sc11.jpg" alt=""></p>
+</div>
+
+
+<style type="text/css">
+
+</style>
+
+<div class="footer_wrap">
+	<div id="footer">
+		<ul class="add clearfix">
+			<li>주식회사 에쓰오지컨설팅</li>
+			<li>대표자 : 신익상</li>
+			<li>주소 : 서울시영등포구 국제금융로20, 율촌빌딩 3층</li>
+		</ul>
+		<ul class="add clearfix">
+			<li>TEL : 02-761-2577</li>
+			<li>FAX : 02-761-2505</li>
+			<li>E-Mail : <a href="mailto:information@sogcorp.com">information@sogcorp.com</a></li>
+		</ul>
+		<p class="copy">Copyright ⓒ 에쓰오지컨설팅. All Rights Reserved.</p>
+	</div>
+</div>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+
+</body></html>
