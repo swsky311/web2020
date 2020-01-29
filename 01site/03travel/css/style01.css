@@ -1,0 +1,74 @@
+div#main_header{width: 100%;height: 150px;border-bottom: 4px solid #0e73a7;box-sizing: content-box;}
+div#main_header div.up{	width: 100%;
+						height: 90px;
+						background-image: url(../images/plane.png);
+						background-repeat: no-repeat;
+						background-size: cover;
+						
+					   }
+
+div#main_header div.up div.upWrap{width: 980px;margin: 0 auto;}
+div#main_header div.up div.upWrap div.le{float: left;margin-right: 80px;}
+div#main_header div.up div.upWrap div.le h1{float: right;padding-top: 10px;}
+div#main_header div.up div.upWrap div.le img{float: left;padding-top: 16px;}
+div#main_header div.up div.upWrap div.le span{color: white;}
+div#main_header div.up div.upWrap div.le p{color: white;font-size: 13px;margin-left: 10px;}
+
+div#main_header div.up div.upWrap div.mi{width: 400px;
+                                        height: 40px;
+                                        _background-color: orange;
+                                        float: left;
+                                        margin-top: 28px;
+                                        position: relative;
+                                    	margin-right:50px;}
+div.mi form.f_layer01{width: 300px;height: 40px;}                                   	
+div.mi form.f_layer01 fieldset p.field{position: absolute;top: 8px;left: 10px;}                                    	
+div.mi form.f_layer01 fieldset{display: block;
+	border: 1px solid #fff;border-radius:30px;width: 400px;height: 40px;
+	position: absolute;top: 0;left:0;background-color: white;}  
+div.mi img{position: absolute;top: 14px;right: 9px;}	                                  	
+div.mi form.f_layer01 fieldset input{border:none;}
+div#main_header 
+
+
+div#main_header div.up div.upWrap div.ri{float: right;}
+div#main_header div.up div.upWrap div.ri p{float: left;color:white;margin-right: 15px; font-size: 18px;margin-top:33px;}
+div#main_header div.up div.upWrap div.ri p span{color:white;font-weight: bold}
+div#main_header div.up div.upWrap div.ri img{float: right;margin-top: 33px;}
+
+div#main_header div.downWrap{background-color: white;}
+div#main_header div.down{width: 980px;margin: 0 auto;}			   
+div#main_header div.down>ul{}
+div#main_header div.down>ul>li{float: left;height: 60px;}
+div#main_header div.down>ul>li>a{display: block;
+								 width: 162px;
+								 height: 60px;
+								 background-color: white;
+								 color:#162731;
+								 border-left: 1px solid #ececec;
+								 text-align: center;
+								 line-height: 60px;}
+div#main_header div.down>ul>li:last-child{border-right: 1px solid #ececec;}		
+
+fieldset{border: 0 none;}
+legend{display: block;position: absolute;right: 0;top: -9999px;}
+
+
+div.middle{position: relative;background-color:pink;height: 252px;min-width:980px;}
+div.middle .textWrap{position: absolute;width:300px;left: 50%;top:20px;margin-left:-100px;text-align: center;}
+/*div.middle img{width: 100%;}
+div.middle div.gray{width: 100%;height: 40px;background-color:rgba(0,0,0,0.4);position: absolute;top: 0;}
+div.middle h2{position: absolute;top: 60px;left: 750px;color:white;font-size: 60px;border-bottom: 4px solid #fff;}
+div.middle p{position: absolute;top: 160px;left: 755px;color:white;}*/
+
+body{background-color: #e9e9e9;}
+
+
+
+
+
+div.footer{width: 980px;height: 94px;background-color:orange;margin: 0 auto;}
+div.footer div.pWrap{width:500px;height: 20px;_background-color: orange;margin-bottom: 10px;}
+div.footer div.pWrap p{float: left;margin-right: 10px;}
+div.footer p:last-child{float: left;}
+
