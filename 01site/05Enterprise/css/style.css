@@ -29,16 +29,32 @@ header#main_header{
 	}
 
 	.slider_wrap .slider_txt{
-		width: 500px;position: absolute;
-		left: 50%;margin-left:-250px;text-align: center;
-		color:white;top:30%;
+		width: 1000px;position: absolute;
+		left: 50%;margin-left:-500px;text-align: center;
+		color:white;top:23%;
 	}
 
+<<<<<<< HEAD
 	.slider_wrap .slider_txt h3{font-size:1.4em; color:#fff;}
 	.slider_wrap .slider_txt span {font-size:1.7em;font-weight: bold;}
 	.slider_wrap .slider_txt p{font-size:1.3em;color: #fff; padding-top: 30px;}
 	.slider_wrap .slider_txt .headerbox{width: 300px; height: 50px; background-color: #FA8E01; position: absolute;}
 	
+=======
+	
+	.slider_wrap .slider_txt h3{font-size:2.0em;}
+	.slider_wrap .slider_txt span {font-weight: bold}
+	.slider_wrap .slider_txt p{font-size:1.2em;padding-top: 30px;}
+
+
+	.slider_wrap .slider_txt .main_box1{width: 25px;height: 3px;background-color: #fff;margin-left: 48%;margin-top:40px;}
+	.slider_wrap .slider_txt .main_box2{width: 265px; height: 70px; background-color: #FA8E01; 
+										position: absolute;left: 365px; bottom: -130px;
+										border-radius: 20px;
+									}
+	.slider_wrap .slider_txt .main_box2 p{padding-top: 20px; font-size: 1.1em;}
+
+>>>>>>> f472207a38cf883cfe378f492fcab7ed35bec9ba
 	/*content*/
 	.content{
 		width: 1260px;margin: 0 auto;
