@@ -31,16 +31,16 @@ header#main_header{
 	.slider_wrap .slider_txt{
 		width: 1000px;position: absolute;
 		left: 50%;margin-left:-500px;text-align: center;
-		color:white;top:23%;
+		color:white;top:21%;
 	}
 
-<<<<<<< HEAD
+
 	.slider_wrap .slider_txt h3{font-size:1.4em; color:#fff;}
 	.slider_wrap .slider_txt span {font-size:1.7em;font-weight: bold;}
 	.slider_wrap .slider_txt p{font-size:1.3em;color: #fff; padding-top: 30px;}
 	.slider_wrap .slider_txt .headerbox{width: 300px; height: 50px; background-color: #FA8E01; position: absolute;}
 	
-=======
+
 	
 	.slider_wrap .slider_txt h3{font-size:2.0em;}
 	.slider_wrap .slider_txt span {font-weight: bold}
@@ -54,7 +54,7 @@ header#main_header{
 									}
 	.slider_wrap .slider_txt .main_box2 p{padding-top: 20px; font-size: 1.1em;}
 
->>>>>>> f472207a38cf883cfe378f492fcab7ed35bec9ba
+
 	/*content*/
 	.content{
 		width: 1260px;margin: 0 auto;
@@ -67,6 +67,7 @@ header#main_header{
 	}
 	.content > ul > li:nth-child(2n){background-color:skyblue;}
 	.content > ul > li p{text-align: center;color:white;font-weight:bold;}
+	.content > ul > .ct1st img {display: block;width: 100px;height: 100px;}
 	.content > ul > li img{display: block;margin: 0 auto;transition:.3s;}
 	.content > ul > li img.icon{margin-bottom: 15px;}
 	.content > ul > li a.iconLink{display: block;height: 315px;padding-top:80px;}
@@ -88,7 +89,31 @@ header#main_header{
 		transform: translate(-50%,-50%);
 	}
 	.content > ul > li.ct2st:hover img.bgImg{transform:scale(1.2)}
+	
 	.content > ul > li.ct3st{width: 50%;}
+	.content > ul > li.ct3st h2{position: relative;	z-index:1;left:50px;top:30px;}
+	.content > ul > li.ct3st .slider2Wrap{
+		position: absolute;top: 0;left: 0;
+		width: 630px;
+	}
+	.content > ul > li.ct3st .slider2 li{}
+	.content > ul > li.ct3st .slider2 li div{
+		width: 315px;height: 315px;float: left;
+	}
+	.content > ul > li.ct3st .slider2 li div.left{
+		padding-top:75px;padding-left:50px;padding-right:50px;
+		background-color: #fff;
+	}
+	.content > ul > li.ct3st .slider2 li div.left:after{
+		content:"";border-width:20px;border-style:solid;
+		border-color:transparent transparent transparent white;
+		position: absolute;left:315px;top:145px;
+	}
+	.content > ul > li.ct3st .btn{position: absolute;bottom:50px;right:365px;}
+	.content > ul > li.ct3st .btn img{float: left;display: block;border: 1px solid #cdcdcd;}
+	.content > ul > li.ct3st .btn img:first-child{border-right:none;}
+
+
 	.content > ul > li.ct4st{background-color: #B8307C;}
 	.content > ul > li.ct5st{background-color: #413D3E;}
 

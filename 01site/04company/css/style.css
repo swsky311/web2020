@@ -1,7 +1,7 @@
 @charset "utf-8";
 header#main_header{
 	height: 1950px;background-color:lightgray;
-	position: relative;
+	position: relative;margin-bottom: 100px;
 }
 	/*header_top*/
 	#header_top{
@@ -73,6 +73,29 @@ header#main_header{
 	}
 	.content > ul > li.ct2st:hover img.bgImg{transform:scale(1.2)}
 	.content > ul > li.ct3st{width: 50%;}
+	.content > ul > li.ct3st h2{position: relative;	z-index:1;left:50px;top:30px;}
+	.content > ul > li.ct3st .slider2Wrap{
+		position: absolute;top: 0;left: 0;
+		width: 630px;
+	}
+	.content > ul > li.ct3st .slider2 li{}
+	.content > ul > li.ct3st .slider2 li div{
+		width: 315px;height: 315px;float: left;
+	}
+	.content > ul > li.ct3st .slider2 li div.left{
+		padding-top:75px;padding-left:50px;padding-right:50px;
+		background-color: #fff;
+	}
+	.content > ul > li.ct3st .slider2 li div.left:after{
+		content:"";border-width:20px;border-style:solid;
+		border-color:transparent transparent transparent white;
+		position: absolute;left:315px;top:145px;
+	}
+	.content > ul > li.ct3st .btn{position: absolute;bottom:50px;right:365px;}
+	.content > ul > li.ct3st .btn img{float: left;display: block;border: 1px solid #cdcdcd;}
+	.content > ul > li.ct3st .btn img:first-child{border-right:none;}
+
+	
 	.content > ul > li.ct4st{background-color: #B8307C;}
 	.content > ul > li.ct5st{background-color: #413D3E;}
 
@@ -85,10 +108,32 @@ header#main_header{
 	.content > ul > li.ct10st{background-color: #413D3E;}
 	.content > ul > li.ct11st{width: 50%;}
 
+	/* container */
+	.container{
+		height: 750px;
+		background:url(../images/contentsbg01.jpg) no-repeat center fixed;
+		background-size: cover;
+	}
 
+	.container.section{width: 1260px; margin: 0 auto;padding-top: 70px;}
+	.container h4{text-align: center;color: white;}
+	.container h4:after{
+		content: "";display: block;width: 50px;height: 3px;background-color: #fff;margin: 20px auto;
+	}
+	.container .section>p {text-align: center;color: white;font-size: 2em;}
+	.container .section li{float: left;margin-right: 20px;width: 300px;} 
+	.container .section li:last-child{margin-right: 0;}
+	.container .vision .card{width: 300px;height: 300px;background-color: skyblue;position: relative;}
+	.container .vision .card img{
+		position: absolute; left: 50%;
+		transform: translateX(-50%); top: 70px;
+	}
 
-
-
+	.container .vision .card .card_body{
+		position: absolute;bottom: 0;
+		width: 300px;height: 160px;padding: 0 20px;
+		text-align: center;color: white;
+	}
 
 
 .bx-wrapper {
