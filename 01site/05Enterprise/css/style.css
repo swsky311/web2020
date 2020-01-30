@@ -37,9 +37,8 @@ header#main_header{
 	.slider_wrap .slider_txt h3{font-size:1.4em; color:#fff;}
 	.slider_wrap .slider_txt span {font-size:1.7em;font-weight: bold;}
 	.slider_wrap .slider_txt p{font-size:1.3em;color: #fff; padding-top: 30px;}
-	.headerbox{width: 300px; height: 50px; background-color: #FA8E01; position: absolute;}
-	.headerbox p{}
-
+	.slider_wrap .slider_txt .headerbox{width: 300px; height: 50px; background-color: #FA8E01; position: absolute;}
+	
 	/*content*/
 	.content{
 		width: 1260px;margin: 0 auto;
