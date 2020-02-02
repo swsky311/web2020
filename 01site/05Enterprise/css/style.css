@@ -223,6 +223,13 @@ _.content2 ul li .card2 p {font-size: 1em;}
 							margin-top: 50px; text-align: center
 						}
 
+/* content3 */
+
+.content3 {width: 1260px; height: 700px; margin: 0 auto;padding-top: 70px;}				
+.content3 ul li{width: 1260px;height: 315px; background-color: skyblue; margin: 0 auto;float: left;}
+
+
+
 
 .bx-wrapper {
     -moz-box-shadow: none;
