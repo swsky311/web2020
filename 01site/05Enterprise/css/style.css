@@ -111,7 +111,7 @@ header#main_header{
 	}
 	.content > ul > li.ct3st .slider2 li div.left:after{
 		content:"";border-width:20px;border-style:solid;
-		border-color:transparent transparent transparent white;
+		border-color:transparent transparent transp	arent white;
 		position: absolute;left:315px;top:145px;
 	}
 	.content > ul > li.ct3st .btn{position: absolute;bottom:50px;right:365px;}
@@ -222,13 +222,6 @@ _.content2 ul li .card2 p {font-size: 1em;}
 .content2 ul .ct18st .card2 p{width: 315px;height: 315px;
 							margin-top: 50px; text-align: center
 						}
-
-/* content3 */
-
-.content3 {width: 1260px; height: 700px; margin: 0 auto;padding-top: 70px;}				
-.content3 ul li{width: 1260px;height: 315px; background-color: skyblue; margin: 0 auto;float: left;}
-
-
 
 
 .bx-wrapper {
