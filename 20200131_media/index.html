@@ -2,22 +2,22 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!-- meta vp 텝 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!-- meta:vp 텝 -->
 	<title>media</title>
 	<link rel="stylesheet" href="../css/reset.css">
 	<style>
 		img{width: 100%;display: block;}
 		ul{width: 100%;}
-		ul>li{float: left;width: 25%;}
+		ul>li{float: left;width: 25%; transition: 0.5s;}
 
-		@media screen and (min-width:960px){
+		@media screen and (min-width:960px){ /* pc ver */
 			body{background-color: #000;}
 		}
 		@media screen and (min-width:540px) and (max-width: 959px){ /* 타블렛 500~960 */
 			body{background-color: skyblue;}
 			ul>li{width: 50%;}
 		}
-		@media screen and (max-width: 539px){
+		@media screen and (max-width: 539px){ /* mobile ver */
 			body{background-color:pink;}
 			ul>li{width: 100%;height: 150px;overflow: hidden;}
 			ul>li img{transform:translateY(-50%);}

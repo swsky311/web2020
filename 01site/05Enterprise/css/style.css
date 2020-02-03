@@ -188,7 +188,7 @@ header#main_header{
 .content2 ul li {width: 25%;height: 315px;float: left; margin: 0 auto; background-color: #f00;}
 .content2 > ul > li img{display: block;margin: 0 auto;}
 .content2 ul .ct12st {height: 630px;}
-_.content2 ul li .card2 p {font-size: 1em;}
+
 
 
 
@@ -222,6 +222,35 @@ _.content2 ul li .card2 p {font-size: 1em;}
 .content2 ul .ct18st .card2 p{width: 315px;height: 315px;
 							margin-top: 50px; text-align: center
 						}
+
+
+.content3 {width: 1260px; height: 315px; margin: 0 auto; padding-top: 70px;}
+.content3 ul li {width: 50%; height: 315px;margin: 0 auto;float: left; background-color: skyblue;}
+.content3 ul li img {display: block; margin: 0 auto;}
+
+.content3 ul .ct19st {position: relative;}
+.content3 ul .ct19st .card3 {width: 320px; height: 50px; background-color: #121153;
+									text-align: center; color: white;
+									position: absolute; top: 0;left: 160px;}
+.content3 ul .ct19st .card3 h3{margin-top: 10px;}
+.content3 ul .ct19st .card3 h2{color:white; margin-top: 50px;}	
+.content3 ul .ct19st .card3 p{color:#F8D353;font-weight: bold;margin-top: 100px; }								
+
+
+.footer_wrap:after{
+	content:"";display: block;width: 1903px;height: 3px;
+	background-color: #727272;_margin:20px auto;}
+.footer_wrap {width:1903px; height: 315px; _background-color: #0f0;
+			margin: 0 auto; padding-top: 70px;}
+
+
+.footer_wrap ul li {float: left; height: 315px;margin: 0 auto;margin-left: 300px;
+					margin-right: 50px; margin-top: 100px;}
+
+.footer_wrap ul li .footer_txt {}
+
+
+
 
 
 .bx-wrapper {

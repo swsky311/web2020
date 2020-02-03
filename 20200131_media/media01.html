@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"> <!-- 반응형 화면 비율 키워드 viewport -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	<!-- meta:vp 텝 -->
+	<meta charset="UTF-8">
+	<title>media</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.container{
+			width: 90%;
+			border: 5px solid #000;
+			margin: 0 auto;
+		}
+		.col{
+			float: left;
+			width: 20%;
+			text-align: center;
+			height: 100px;
+		}
+		.container div.col:nth-child(1){background-color: #f00;}
+		.container div.col:nth-child(2){background-color: #0f0;}
+		.container div.col:nth-child(3){background-color: #00f;}
+		.container div.col:nth-child(4){background-color: #ff0;}
+		.container div.col:nth-child(5){background-color: #0ff;}
+
+		@media screen and (max-width: 960px) {
+			.col{width: 50%;}
+			/* .md-w{width: 100%;} */
+			.md-w{display: none;}
+		}
+		@media screen and (max-width:540px) {
+			.col{width: 100%;}
+			.md-w{display: block;}
+		}
+	</style>
+</head>
+<body>
+	<div class="container clearfix">
+		<div class="col">1</div>
+		<div class="col">2</div>
+		<div class="col">3</div>
+		<div class="col">4</div>
+		<div class="col md-w">5</div>
+	</div>
+</body>
+</html>
