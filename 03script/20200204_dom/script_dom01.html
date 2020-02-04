@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>dom2</title>
+	<script>
+		function change(){
+			var span=document.getElementById("mySpan");
+			span.style.color = "green";
+			span.style.fontSize = "30px";
+			span.style.display = "block";
+			span.style.width = "6em";
+			span.style.border = "3px dotted magenta";
+			span.style.margin = "20px";
+		}
+		
+		function move(){
+			var divBox = document.getElementById("box");
+			divBox.style.left = "0px";
+		}
+		function moveOut(){
+			var divBox = document.getElementById("box");
+			divBox.style.left = "-200px";
+		}
+	</script>
+</head>
+<body>
+	<h3>CSS 스타일 동적변경</h3>
+	<hr>
+	<p style="color:blue">이것은
+		<span id="mySpan" style="color:red">문장입니다</span>
+	</p>
+	<input type="button" value="스타일변경" onclick="change()">
+	<style>
+		#box{
+			width: 200px;height: 200px;line-height: 200px;
+			text-align: center;background-color:skyblue;
+			position: absolute;left:-200px;transition:0.3s;
+		}
+	</style>
+	<div id="box">box</div>
+	<input type="button" value="box move" onclick="move()">
+	<input type="button" value="box move" onclick="moveOut()">
+
+	<a href="script_dom01.html">새로고침</a>
+	<div onclick="moveOut()" style="position:relative;">버튼</div>
+
+</body>
+</html>

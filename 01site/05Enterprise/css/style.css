@@ -111,7 +111,7 @@ header#main_header{
 	}
 	.content > ul > li.ct3st .slider2 li div.left:after{
 		content:"";border-width:20px;border-style:solid;
-		border-color:transparent transparent transp	arent white;
+		border-color:transparent transparent transparent white;
 		position: absolute;left:315px;top:145px;
 	}
 	.content > ul > li.ct3st .btn{position: absolute;bottom:50px;right:365px;}
@@ -208,8 +208,18 @@ header#main_header{
 .content2 ul .ct14st .card2 img {position: absolute; top: 200px; left: 30px;}
 .content2 ul .ct14st .card2 h3 {position: absolute; top: 205px; left: 80px;}
 .content2 ul .ct14st .card2 p{width: 315px;height: 315px;
-							margin-top: 50px; text-align: center;
-						}
+							margin-top: 50px; text-align: center;}
+.content2 ul .ct14st .card2 p:after{
+		content:"";border-width:20px;border-style:solid;
+		border-color: #e7c8a6 transparent transparent transparent;
+		position: absolute; left: 140px; bottom: 10px; z-index: 1;}
+
+
+.content2 ul .ct15st .card2	img:after{
+		content:"";border-width:20px;border-style:solid;
+		border-color:transparent transparent white;
+		position: absolute; left: 140px; bottom: 50px;}						
+						
 .content2 ul .ct16st .card2 {position: relative;}
 .content2 ul .ct16st .card2 img {position: absolute; top: 200px; left: 30px;}
 .content2 ul .ct16st .card2 h3 {position: absolute; top: 205px; left: 80px;}						
@@ -220,11 +230,15 @@ header#main_header{
 .content2 ul .ct18st .card2 img {position: absolute; top: 200px; left: 30px;}
 .content2 ul .ct18st .card2 h3 {position: absolute; top: 205px; left: 80px;}						
 .content2 ul .ct18st .card2 p{width: 315px;height: 315px;
-							margin-top: 50px; text-align: center
-						}
+							margin-top: 50px; text-align: center}
+.content2 ul .ct18st .card2 p:after{
+		content:"";border-width:20px;border-style:solid;
+		border-color: transparent transparent #e7c8a6 ;
+		position: absolute; left: 140px; top:-90px; z-index: 1;}							
+						
 
 
-.content3 {width: 1260px; height: 315px; margin: 0 auto; padding-top: 70px;}
+.content3 {width: 1260px; height: 385px;margin: 0 auto; padding-top: 70px; margin-bottom: 70px;}
 .content3 ul li {width: 50%; height: 315px;margin: 0 auto;float: left; background-color: skyblue;}
 .content3 ul li img {display: block; margin: 0 auto;}
 
@@ -237,19 +251,13 @@ header#main_header{
 .content3 ul .ct19st .card3 p{color:#F8D353;font-weight: bold;margin-top: 100px; }								
 
 
-.footer_wrap:after{
-	content:"";display: block;width: 1903px;height: 3px;
-	background-color: #727272;_margin:20px auto;}
-.footer_wrap {width:1903px; height: 315px; _background-color: #0f0;
-			margin: 0 auto; padding-top: 70px;}
 
 
-.footer_wrap ul li {float: left; height: 315px;margin: 0 auto;margin-left: 300px;
-					margin-right: 50px; margin-top: 100px;}
 
-.footer_wrap ul li .footer_txt {}
-
-
+.footer{width: 1260px; margin: 0 auto; height: 200px;_background-color: orange;}
+.footer .p_wrap {float: right; width: 707px; height: 63px; margin-right: 200px;margin-top: 50px;}
+.footer .p_wrap p{padding-bottom: 20px;}
+.footer .img_wrap{display: block;float: left; width: 150px; height: 50px; margin-left: 0;margin-top: 50px;}
 
 
 
@@ -260,3 +268,20 @@ header#main_header{
     border: 0 none; 
     background: #fff;
 }
+
+
+/* sub01 */
+
+#sub_header{height: 460px; background-color: skyblue;}
+#main_menu ul li a.active{color:#fa8e01;}
+.txt_Wrap {position: relative;}
+.txt_Wrap img{display: block;}
+.txt_Wrap h1{position:absolute; top: 230px; left:800px;color:white;}
+
+.box_Wrap{width: 1260px; height: 70px; background-color: #f00; margin: 0 auto;}
+.box_Wrap ul{height: 70px;width: 1260px;}
+.box_Wrap ul>li {height: 70px;float: left;border-right: 1px solid #000;}
+.box_Wrap ul>li>a{display: block;line-height: 70px; width: 251px; height: 70px; 
+				text-align: center; background-color: pink;}
+
+.box_Wrap ul>li				

@@ -29,10 +29,9 @@
 			}
 		}
 	</script>
-
 	<script>
 		// var myCar = {name:"sonata"}
-		var myCar = new Object(); // new Object:내장객체 선언
+		var myCar = new Object();
 		myCar.name = 'Sonata';
 		myCar.speed = 100;
 		myCar.color = "white";
@@ -40,19 +39,20 @@
 			var sp = myCar.speed + 200;
 			console.log(sp);
 		};
-	</script>
 
+
+	</script>
 	<p id="d1"></p>
 	<p id="d2"></p>
 	<p id="d3"></p>
 	<script>
 		var today = new Date();
-		document.getElementByID("d1").innerHTML = today.getFullYear() + "년";
-		document.getElementByID("d2").innerHTML = 
-		today.getMonth()+1 + "월" + today.getDate() + "일";
-		document.getElementByID("d3").innerHTML =  
+		document.getElementById("d1").innerHTML = today.getFullYear() + "년";
+		document.getElementById("d2").innerHTML = 
+		today.getMonth()+1 + "월 " +  today.getDate() + "일";
+		document.getElementById("d3").innerHTML = 
 		today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
 	</script>
+
 </body>
 </html>

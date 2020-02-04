@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{
+			display: table; width: 90%;height: 100px;
+			border: 1px solid #000;
+			background-color:pink;
+			margin: 0 auto;
+		}
+		.inbox{
+			display:table-cell;
+			vertical-align: middle;
+			text-align: center;
+			border-right: 1px solid #000;
+		}
+
+		.inbox:last-child{border-right: 0 none;}
+	</style>
+</head>
+<body>
+	<ul class="box">
+		<li class="inbox">test</li>
+		<li class="inbox">test</li>
+		<li class="inbox">test</li>
+		<li class="inbox">test</li>
+		<li class="inbox">test</li>
+	</ul>
+</body>
+</html>
