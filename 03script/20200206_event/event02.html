@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+</head>
+<body>
+	<p id="p">Lorem ipsum dolor.</p>
+	<button onclick="f(event)">클릭하세요</button>
+
+	<script>
+		function f(event){
+			alert(event.type);
+		}
+		document.getElementById("p").onmouseover = f;
+	</script>
+</body>
+</html>

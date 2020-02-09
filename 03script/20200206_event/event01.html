@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script>
+		
+		function init(){
+			var p = document.getElementById("p");
+			var div = document.getElementById("div");
+			p.onmouseover = over;
+			p.onmouseout = function(){
+				// p.style.backgroundColor = "white";
+				this.style.backgroundColor ="white";
+			};
+			div.addEventListener("mouseover",overDiv);
+			div.addEventListener("mouseout",
+				function(){
+					div.style.backgroundColor = "white";
+				}
+			);
+		}
+		function over(){
+			p.style.backgroundColor = "orchid";
+		}
+		function overDiv(){
+			this.style.backgroundColor = "skyblue";
+		}
+		// function outDiv(){
+		// 	div.style.backgroundColor ="white";
+		// }
+		// function out(){
+		// 	p.style.backgroundColor = "white";
+		// }
+	</script>
+</head>
+<body onload="init()">
+	<h3>Lorem ipsum dolor.</h3>
+	<hr>
+	<p id="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, vel.</p>
+	<div id="div">Lorem ipsum dolor sit amet.</div>
+</body>
+</html>

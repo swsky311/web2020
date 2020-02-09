@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+</head>
+<body>
+	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, ea.</h3>
+	<hr>
+	<img src="../../images/testimg.jpg" alt=""
+	onmousemove="where(event)" 
+	>
+	<div id="div"></div>
+
+	<script>
+		var div = document.getElementById("div");
+		function where(e){
+			console.log("mouse X :"+ e.offsetX + ", Y :" + e.offsetY);
+			var text = "offset X :"+ e.offsetX + ", Y :" + e.offsetY + "<br>";
+			text += "client X : "+ e.clientX +", Y : " + e.clientY + "<br>"
+
+			div.innerHTML = text;
+		}
+	</script>
+</body>
+</html>
