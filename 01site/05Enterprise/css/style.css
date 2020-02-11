@@ -300,6 +300,20 @@ header#main_header{
 		margin-top: 80px; position: relative;}
 .sub_text01 h2 {width: 300px;color: #115D7B; position: absolute; top: 20px; left: -22px;}
 
+.sub_text01_02{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
+		margin-top: 80px; position: relative;}
+.sub_text01_02 h2 {width: 300px;color: #115D7B; position: absolute; top: 20px; left: -35px;}
+
+.sub_text01_03{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
+		margin-top: 80px; position: relative;}
+.sub_text01_03 h2 {width: 300px;color: #115D7B; position: absolute; top: 20px; left: -10px;}
+
+.sub_text01_04{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
+		margin-top: 80px; position: relative;}
+.sub_text01_04 h2 {width: 300px;color: #115D7B; position: absolute; top: 20px; left: -22px;}
+
+
+
 .sub_visual{width: 1260px; margin: 0 auto;}
 
 
@@ -325,8 +339,13 @@ header#main_header{
 
 .sub_text02{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
 			margin-top: 80px; position: relative;}
-.sub_text02 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-35px;}
+.sub_text02 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-25px;}
 
+
+.sub_text02_03 {width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
+			margin-top: 80px; position: relative;}
+
+.sub_text02_03 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-60px;}				
 
 /* sub03 */
 
@@ -348,10 +367,18 @@ header#main_header{
 .location03 ul li a.active{color:#115D7B;}
 .location03 ul li a{display: block;}
 
-.sub_text03{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
+.sub_text03_01{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
 			margin-top: 80px; position: relative;}
-.sub_text03 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-10px;}
+.sub_text03_01 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-80px;}
 
+.sub_text03_02{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
+			margin-top: 80px; position: relative;}
+.sub_text03_02 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-40px;}
+
+
+.sub_text03_03{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
+			margin-top: 80px; position: relative;}
+.sub_text03_03 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-60px;}
 
 /* sub04 */
 
@@ -364,7 +391,7 @@ header#main_header{
 
 .sub_text04{width: 50px;height: 3px; background-color: #115D7B; margin: 0 auto; 
 			margin-top: 80px; position: relative;}
-.sub_text04 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left:-20px;}
+.sub_text04 h2{width: 300px;color: #115D7B; position: absolute; top: 20px; left: 0;}
 
 
 /* sub05 */
