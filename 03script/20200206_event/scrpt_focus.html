@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>focus</title>
+	<script>
+		function check(obj){
+
+			//alert(obj.value);
+			if(obj.value == ""){
+			//alert("이름이 비어있네요!!!!")
+
+		}
+			}
+	</script>
+</head>
+<body onload="document.getElementById('name').focus();">
+	<form>
+		이름 <input type="text" id="name" onblur="check(this)"><br>
+		전화번호 <input type="text" id="tel">
+
+		<input type="radio" value="서울" name= "kcity" checked >서울
+		<input type="radio" value="부산" name= "kcity" >부산
+		<input type="radio" value="대구" name= "kcity" >대구
+	</form>
+</body>
+</html>

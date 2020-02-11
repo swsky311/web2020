@@ -14,7 +14,7 @@ header#main_header{
 	#main_menu{}
 	#main_menu>ul{}
 	#main_menu>ul>li{float: left;height: 50px;}
-	#main_menu>ul>li>a{display: block;line-height:50px;padding:0 30px; color: #fff; font-weight: bold;}
+	#main_menu>ul>li>a{display: block;line-height:50px;padding:0 20px; color: #fff; font-weight: bold;}
 
 	/*slider*/
 	.slider_wrap{height: 1005px;}
@@ -38,7 +38,7 @@ header#main_header{
 	.slider_wrap .slider_txt h3{font-size:1.4em; color:#fff;}
 	.slider_wrap .slider_txt span {font-size:1.7em;font-weight: bold;}
 	.slider_wrap .slider_txt p{font-size:1.3em;color: #fff; padding-top: 30px;}
-	.slider_wrap .slider_txt .headerbox{width: 300px; height: 50px; background-color: #FA8E01; position: absolute;}
+	.slider_wrap .slider_txt .headerbox{width: 300px; height: 50px; background-color: #115D7B; position: absolute;}
 	
 
 	
@@ -48,7 +48,7 @@ header#main_header{
 
 
 	.slider_wrap .slider_txt .main_box1{width: 25px;height: 3px;background-color: #fff;margin-left: 48%;margin-top:40px;}
-	.slider_wrap .slider_txt .main_box2{width: 265px; height: 70px; background-color: #FA8E01; 
+	.slider_wrap .slider_txt .main_box2{width: 265px; height: 70px; background-color: #115D7B; 
 										position: absolute;left: 365px; bottom: -130px;
 										border-radius: 20px;
 									}
@@ -273,15 +273,19 @@ header#main_header{
 /* sub01 */
 
 #sub_header{height: 460px; background-color: skyblue;}
-#main_menu ul li a.active{color:#fa8e01;}
+#main_menu ul li a.active{color:#115D7B;}
 .txt_Wrap {position: relative;}
 .txt_Wrap img{display: block;}
-.txt_Wrap h1{position:absolute; top: 230px; left:800px;color:white;}
+.txt_Wrap h1{position:absolute; top: 230px; left:45%;color:white;}
 
-.box_Wrap{width: 1260px; height: 70px; background-color: #f00; margin: 0 auto;}
-.box_Wrap ul{height: 70px;width: 1260px;}
-.box_Wrap ul>li {height: 70px;float: left;border-right: 1px solid #000;}
-.box_Wrap ul>li>a{display: block;line-height: 70px; width: 251px; height: 70px; 
-				text-align: center; background-color: pink;}
+.box_Wrap{width: 1260px; height: 70px; background-color: #115D7B; margin: 0 auto;}
+.box_Wrap ul{height: 70px;width: 1260px; margin: 0 auto;background-color: #DBDFE0; position: absolute; top: 390px;left: 17%;}
+.box_Wrap ul>li {height: 70px;float: left;border-right: 1px solid #fff;}
+.box_Wrap ul li a.active{background-color: #115D7B; color:#fff;}
+.box_Wrap ul>li:last-child{border-right: none;}
+.box_Wrap ul>li>a{display: block;line-height: 70px; width: 251px; height: 70px;
+				text-align: center; color:#000;}
+.sub_visual{width: 1260px; margin: 0 auto;}
 
-.box_Wrap ul>li				
+
+/* sub02 */				

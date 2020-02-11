@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>onchange</title>
+	<script>
+		function changeImage(){
+			var sel = document.getElementById("sel");
+			var img = document.getElementById("myImg");
+
+			var index = sel.selectedIndex; //선택된 옵션의 index
+			console.log(sel.options[index].value);
+			img.src = "../../images/banana.png"//이미지 바꾸기
+			img.src = sel.options[index].value;
+
+			console.log(img.width);
+			var mySpan = document.getElementById("mySpan");
+			mySpan.innerHTML = img.width + " X " + img.height;
+		}
+		window.onload = function(){
+		var img = document.getElementById("myImg");
+		var mySpan = document.getElementById("mySpan");
+		mySpan.innerHTML = img.width + " X " + img.height;
+		};
+		
+	</script>
+</head>
+<body>
+	<form>
+		<select id="sel" onchange="changeImage()">
+			<option value="../../images/apple.png">사과</option>
+			<option value="../../images/banana.png">바나나</option>
+			<option value="../../images/testimg.jpg">에펠탑</option>
+		</select>
+		<span id="mySpan">이미지크기</span>
+	</form>
+	<br>
+	<img src="../../images/apple.png" alt="사과" id="myImg">
+
+</body>
+</html>
