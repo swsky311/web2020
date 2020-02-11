@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll</title>
+	<script>
+		//window.onload=function(){}
+
+		function startScroll(){
+			setInterval("autoScroll()",200)
+		}
+		function autoScroll(){
+			window.scrollBy(0,5)
+		}
+		window.onload = function(){
+			startScroll();
+		}
+	</script>
+</head>
+<!-- <body onload="startScroll()"> -->
+<body>	
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Impedit est laborum earum,<br> quasi quae aliquam omnis magnam<br> delectus accusantium iure.<br><br>
+
+	<a href="#" onclick="window.scrollTo(0,0)">위로</a>
+	<a href="#" onclick="window.location.href='http://www.daum.net'">다음</a>
+	<div onclick="window.location.href='http://www.daum.net'">다음1></div>
+	<div onclick="dUrl()">다음2></div>
+</body>
+</html>
