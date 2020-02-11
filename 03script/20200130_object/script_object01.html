@@ -3,56 +3,87 @@
 <head>
 	<meta charset="UTF-8">
 	<title>object</title>
+<style>
+	div{background-color: orange;}
+</style>
 </head>
 <body>
-	<div id="upspeed"></div>
-	<div id="downspeed"></div>
+	<div id="var1"></div>
+	<div id="var2"></div>
+	<div class="var3">1</div>
+	<div class="var3">2</div>
 	<script>
-		var car1 = {
-			name:"Bonggo",
-			speed:100,
-			color:"red",
-			speedup:function(a){
-				var sp = this.speed + a;
-				
-				if(sp>=300){
-					sp = 50;
-				}
-				console.log(sp);
+		var car = ["Sonata","100","white"];
+		var car1 = {name:"Volt",speed:200,color:"Red"};	
+		document.getElementById("var1").innerHTML = "자동차이름 : "+car1.name;
+		document.getElementById("var2").innerHTML = "자동차 속도 : " + car1["speed"];
+
+		var carColor = document.getElementsByClassName("var3");
+
+		//document.getElementsByClassName("var3")[1].innerHTML ="자동차 색깔 :"+car1.color;
+
+		
+		carColor[1].innerHTML = "자동차 색깔 :"+car1.color; 
+		carColor[0].innerHTML = "자동차의 색상"; 
+	</script>
+
+	<!-- <p id="msg1"></p>
+	<p id="msg2"></p>
+	<p id="msg3"></p> -->
+
+	<p class="msg1"></p>
+	<p class="msg2"></p>
+	<p class="msg3"></p>
+
+	<script>
+		var obj ={
+			m1:function(){
+				return "Hello Sonata";
 			},
-			speeddown:function(a){
-				var sp = this.speed - a;
-				if(sp<0){
-					sp = 0;
-				}
-				console.log(sp);
+			m2:function(a){
+				var result = a;
+				return result;
+			},
+			m3:function(a,b){
+				var result = a+b;
+				return result;
 			}
-		}
-	</script>
-	<script>
-		// var myCar = {name:"sonata"}
-		var myCar = new Object();
-		myCar.name = 'Sonata';
-		myCar.speed = 100;
-		myCar.color = "white";
-		myCar.speedUp = function(){
-			var sp = myCar.speed + 200;
-			console.log(sp);
 		};
-
-
+		document.getElementsByClassName("msg1")[0].innerHTML = obj.m1(); 
+		document.getElementsByClassName("msg2")[0].innerHTML = obj.m2(100); 
+		document.getElementsByClassName("msg3")[0].innerHTML = obj.m3(100,200); 
 	</script>
-	<p id="d1"></p>
-	<p id="d2"></p>
-	<p id="d3"></p>
+
 	<script>
-		var today = new Date();
-		document.getElementById("d1").innerHTML = today.getFullYear() + "년";
-		document.getElementById("d2").innerHTML = 
-		today.getMonth()+1 + "월 " +  today.getDate() + "일";
-		document.getElementById("d3").innerHTML = 
-		today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+		var divTags = document.getElementsByTagName("div");
+		console.log("div tag count : " + divTags.length);
+		var pTags = document.getElementsByTagName("p");
+		console.log("p tag count : " + pTags.length);
+
+		// divTags[0].style.border = "2px solid #000";
+
+		function divColor(){
+		for(var i=0;i<divTags.length;i++){
+			console.log(i);
+			divTags[i].style.backgroundColor = "#00FF00";
+
+		}
+	}
+	function divColorClear(){
+		for(var i=0;i<divTags.length;i++){
+			console.log(i);
+			divTags[i].style.backgroundColor = "orange";
+
+		}
+	}
+
+		// for(var i =0;i<pTags.length;i++){
+		// 	pTags[i].style.border ="2px solid #000";
+		// };
+	
 	</script>
+	<button type="button" onclick="divColor()">div border 바꾸기</button>
+	<button type="button" onclick="divColorClear()">원상태로</button>
 
 </body>
 </html>

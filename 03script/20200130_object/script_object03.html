@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+<body>
+	<div id="upspeed"></div>
+	<div id="downspeed"></div>
+	<script>
+		var car1 ={
+			name:"Bonggo",
+			speed:100,
+			color:"red",
+			speedup:function(a){
+				var sp = this.speed + a;
+				
+				if(sp>=300){
+					sp = 50;
+				}
+				console.log(sp);
+			},
+			speeddown:function(a){
+				var sp = this.speed - a;
+				if(sp<0){
+					sp = 0;
+				}
+				console.log(sp);
+			}
+		}
+	</script>
+	<script>
+		// var myCar = {name:"Sonata"}
+		var myCar = new Object();
+		myCar.name = 'Sonata';
+		myCar.speed = 100;
+		myCar.color = "white";
+		myCar.speedup = function(){
+			var sp = myCar.speed + 100;
+			console.log(sp);
+		};
+
+	</script>
+	<p id="d1"></p>
+	<p id="d2"></p>
+	<p id="d3"></p>
+	<script>
+		var today = new Date();
+		document.getElementById("d1").innerHTML = today.getFullYear() + "년";
+		document.getElementById("d2").innerHTML =
+		 today.getMonth() + 1 + "월" + today.getDate() + "일"; //month는 0부터 계산이라서 + 1 해줘야 함 
+		document.getElementById("d3").innerHTML =
+		 today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	</script>
+</body>
+</html>
