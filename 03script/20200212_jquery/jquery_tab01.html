@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>tab01</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	
+
+	<style>
+		.contentWrap{width: 533px;margin: 0 auto;}
+		.contentWrap ul{width: 100%;}
+		.contentWrap ul li{float: left;width: 25%;}
+		.contentWrap img{display: block;}
+		.contentTxt img{display: none;}
+		.contentTxt img:first-child{display: block;}
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$(".contentWrap > ul > li").click(function(){
+				var liNum = $(this).index();
+				console.log(liNum);
+				$(".contentWrap>ul>li").removeClass();
+				$(this).addClass("active");
+				//$("contentWrap>ul>li").eq(liNum).addClass("active");
+
+				$(".contentTxt>img").hide();
+				$(".contentTxt>img").eq(liNum).show();
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="contentWrap">
+		<ul class="clearfix">
+			<li class="active"><img src="../images/btn1_1.jpg" alt=""></li>
+			<li><img src="../images/btn2_1.jpg" alt=""></li>
+			<li><img src="../images/btn3_1.jpg" alt=""></li>
+			<li><img src="../images/btn4_1.jpg" alt=""></li>
+			
+		</ul>
+	<div class="contentTxt">
+		<img src="../images/spring.jpg" alt="">
+		<img src="../images/summer.jpg" alt="">
+		<img src="../images/fall.jpg" alt="">
+		<img src="../images/winter.jpg" alt="">
+	</div>
+	</div>
+</body>
+</html>

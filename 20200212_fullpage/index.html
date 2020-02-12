@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>fullpage</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				anchors:["1st","2st","3st","4st"],
+				menu:"#topMenu",
+				navigation:true,
+				slidaNavigation:true
+			});
+
+		});
+	</script>
+
+	<style>
+		nav#navTop{
+			position: fixed; z-index:1;width: 100%;
+			background-color: #cdcdcd;padding-left: 10px;
+		}
+		nav#navTop li{float: left;}
+		nav#navTop li a{display: block;line-height: 50px;text-align: center;padding:0 10px;}
+		#page1{background-image: url(images/bg1.jpg);}
+		#page2{background-image: url(images/bg2.jpg);}
+		#page3{background-image: url(images/bg3.jpg);}
+		#page4{background-image: url(images/bg4.jpg);}
+		.page{
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+		}	
+		.active{background-color:skyblue;}
+		
+	</style>
+</head>
+<body>
+	<nav id="navTop" class="clearfix">
+		<ul id="topMenu">
+			<li data-menuanchor="1st"><a href="#1st">menu1</a></li>
+			<li data-menuanchor="2st"><a href="#2st">menu2</a></li>
+			<li data-menuanchor="3st"><a href="#3st">menu3</a></li>
+			<li data-menuanchor="4st"><a href="#4st">menu4</a></li>
+		</ul>
+	</nav>
+	<div id="fullpage">
+		<div class="section page" id="page1" data-anchor="1st">1</div>
+		<div class="section page" id="page2" data-anchor="2st">2</div>
+		<div class="section page" id="page3" data-anchor="3st">3</div>
+		<div class="section page" id="page4" data-anchor="4st">4</div>
+	</div>
+</body>
+</html>

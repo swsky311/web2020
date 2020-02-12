@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>img tabs</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		img{display: block;}
+		.wrapper{width: 522px;margin: 0 auto;}
+		.wrapper li{float: left;width: 123px;margin-right: 10px;}
+		.wrapper li:last-child{margin-right: 0;}
+	</style>
+
+	<script>
+		var viewImg = [
+		"../images/spring.jpg",
+		"../images/summer.jpg",
+		"../images/fall.jpg",
+		"../images/winter.jpg"
+		];
+
+		$(document).ready(function(){
+			$(".wrapper>ul>li").click(function(){
+				var liNum = $(this).index();
+				$(".image>img").attr("src",viewImg[liNum]);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="clearfix">
+			<li><img src="../images/btn1_1.jpg" alt="봄"></li>
+			<li><img src="../images/btn2_1.jpg" alt="여름"></li>
+			<li><img src="../images/btn3_1.jpg" alt="가을"></li>
+			<li><img src="../images/btn4_1.jpg" alt="겨울"></li>
+		</ul>
+	
+	<div class="image">
+		<img src="../images/spring.jpg" alt="봄">
+	</div>
+</div>
+</body>
+</html>
