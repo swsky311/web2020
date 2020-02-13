@@ -13,36 +13,32 @@
 				anchors:["1st","2st","3st","4st"],
 				menu:"#topMenu",
 				navigation:true,
-				slidaNavigation:true
+				slideNavigation:true
 			});
-
 		});
 	</script>
-
 	<style>
 		nav#navTop{
-			position: fixed; z-index:1;width: 100%;
-			background-color: #cdcdcd;padding-left: 10px;
+			position: fixed;z-index:1;width:100%;
+			background-color: #cdcdcd;padding-left:10px;
 		}
 		nav#navTop li{float: left;}
-		nav#navTop li a{display: block;line-height: 50px;text-align: center;padding:0 10px;}
-		#page1{background-image: url(images/bg1.jpg);}
+		nav#navTop li a{display: block;line-height:50px;text-align: center;padding: 0 10px;}
+		#page1{background-image: url(images/bg1.png);}
 		#page2{background-image: url(images/bg2.jpg);}
 		#page3{background-image: url(images/bg3.jpg);}
 		#page4{background-image: url(images/bg4.jpg);}
 		.page{
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: cover;
-
-		}	
-		.active{background-color:skyblue;}
-		
+			background-size:cover;
+		}
+		#navTop .active{background-color:skyblue;}
 	</style>
 </head>
 <body>
-	<nav id="navTop" class="clearfix">
-		<ul id="topMenu">
+	<nav id="navTop">
+		<ul id="topMenu" class="clearfix">
 			<li data-menuanchor="1st"><a href="#1st">menu1</a></li>
 			<li data-menuanchor="2st"><a href="#2st">menu2</a></li>
 			<li data-menuanchor="3st"><a href="#3st">menu3</a></li>

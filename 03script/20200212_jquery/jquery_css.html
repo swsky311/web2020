@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		p{background-color: skyblue;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("div")
+				.css("font-size","30px")
+				.css("background-color","skyblue");
+
+				$("p").css({
+					"font-size":20,
+					"background-color":"red"
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<p>Lorem ipsum.</p>
+	<div>text</div>
+	<p>Lorem ipsum.</p>
+	<p>Lorem ipsum.</p>
+	<p>Lorem ipsum.</p>
+	<p>Lorem ipsum.</p>
+
+	<button>글자변형</button>
+</body>
+</html>
