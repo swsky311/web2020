@@ -2,39 +2,66 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>menu bar</title>
+	<title>tab</title>
 	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/jquery.bxslider.css">
+	<script src="../../js/jquery.bxslider.js"></script>
 	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
 
+			});
+		});
+	</script>
 	<style>
-		.nav{width: 1000px; margin: 0 auto;}
+		.nav{width: 1000px;margin: 0 auto;}
 		ul.menu{width: 1000px;}
-		ul.menu li{width: 20%;height: 40px;line-height: 40px;
-			float: left; text-align: center;cursor:pointer;
+		ul.menu li{
+			float: left;width: 200px;
+			line-height: 40px;
+			text-align: center;
+			cursor: pointer;
 			position: relative;
 		}
 		ul.menu li.active:before{
-			content:"";display: block;width: 8px;height: 8px;
-			border-radius: 50%;background-color: #f00;
-			position: absolute; left:50%; transform: translateX(-50%);
+			width: 8px;
+			height: 8px;
+			content: "";
+			border-radius: 50%;
+			position:absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+			background-color: #f00;
 		}
-		ul.menu li.active{color:#f00;}
+		ul.menu li.active{color:red;}
 
 		ul.menu li:hover:before{
-			content:"";display: block;width: 8px;height: 8px;
-			border-radius: 50%;background-color: #f00;
-			position: absolute; left:50%; transform: translateX(-50%);
+			width: 8px;
+			height: 8px;
+			content: "";
+			border-radius: 50%;
+			position:absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+			background-color: #f00;
+		}
+		ul.menu li:hover{color:red;}
+
+		.bar{
+			width: 200px;height: 5px;background-color: #f00;
+			position: relative;
+		}
+		.img{width: 1000px;margin: 0 auto;position: relative;}
+		.img img{
+			width: 1000px;
+			float: left;
 		}
 
-		ul.menu li:hover{color:#f00;}
-		.bar{width: 200px;height: 5px;background-color: #f00;
-			position: relative};
-
-
-		.img{width: 1000px;margin: 0 auto;}
-		.img .imgWrap{}
-		img{width: 1000px;}	
 	</style>
+	
 </head>
 <body>
 	<div class="nav">
@@ -45,36 +72,45 @@
 			<li>menu4</li>
 			<li>menu5</li>
 		</ul>
-	
-	<div class="bar"></div>
+		<div class="bar"></div>
 	</div>
-
-	<div class="img"style="width:1000px;margin: 0 auto">
-		<div class="imgWrap">
-			<img src="../images/img01.jpg" alt="menu1">
-			<img src="../images/img02.jpg" alt="menu2">
-			<img src="../images/img03.jpg" alt="menu3">
-			<img src="../images/img04.jpg" alt="menu4">
-			<img src="../images/img05.jpg" alt="menu5">
+	<div class="img"style="width: 1000px;overflow: hidden;">
+		<div class="imgWrap clearfix" style="width:5000px;position: relative;">
+			<img src="../images/img01.jpg" alt="">
+			<img src="../images/img02.jpg" alt="">
+			<img src="../images/img03.jpg" alt="">
+			<img src="../images/img04.jpg" alt="">
+			<img src="../images/img05.jpg" alt="">
 		</div>
 	</div>
-
 	<script>
 		function nowMenu(menu){
 				$(".menu>li").eq(menu).addClass("active");
 				$(".bar").animate({left:menu*200},100);
 
-				$(".menu>li").mouseenter(function(){  //mouseover
-					var menuLi = $(this).index();
-					$(".bar").animate({left:menuLi*200},100);
+
+				$(".menu>li").mouseenter(function(){
+					var liNum = $(this).index();
+					$(".imgWrap").animate({left:liNum*-1000},200);
+					$(".bar").stop().animate({left:liNum*200},100);
 				});
-				$(".nav").mouseleave(function(){   //mouseout
-					$(".bar").anumate({left:menu*200},100);	
+				
+
+				// $(".nav").mouseleave(function(){
+				// 	$(".bar").animate({left:menu*200},100);
+				// 	$(".imgWrap").animate({left:menu*-1000},200);
+				// });
+				$(".menu>li").click(function(){
+					var liNum = $(this).index();
+					$(".menu>li").removeClass();
+					$(this).addClass("active");
+					$(".bar").animate({left},100);
+					
 				});
 
 			}
-			nowMenu(4);
-
+			nowMenu(0);
 	</script>
+	
 </body>
 </html>
