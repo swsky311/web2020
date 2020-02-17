@@ -13,7 +13,21 @@
 				anchors:["1st","2st","3st","4st"],
 				menu:"#topMenu",
 				navigation:true,
-				slideNavigation:true
+				slideNavigation:true,
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+", "+index);
+					if(index ==2){
+						$("#onView").addClass("move");
+					}else{
+						$("#onView").removeClass("move");
+					}
+
+					if(index ==3){
+						$("#onView01").addClass("move01");
+					}else{
+						$("#onView01").removeClass("move01");
+					}
+				}
 			});
 		});
 	</script>
@@ -24,7 +38,7 @@
 		}
 		nav#navTop li{float: left;}
 		nav#navTop li a{display: block;line-height:50px;text-align: center;padding: 0 10px;}
-		#page1{background-image: url(images/bg1.png);}
+		#page1{background-image: url(images/bg1.jpg);}
 		#page2{background-image: url(images/bg2.jpg);}
 		#page3{background-image: url(images/bg3.jpg);}
 		#page4{background-image: url(images/bg4.jpg);}
@@ -32,8 +46,36 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size:cover;
+			text-align: center;
+		}
+		.scroll{position: absolute; bottom: 20px;left: 50%;
+			transform: translateX(-50%);
+			animation-name: xScroll;
+			animation-duration: 0.8s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}
 		}
 		#navTop .active{background-color:skyblue;}
+		.main{
+			width: 400px;position: absolute;left: 50%;
+			color:white; transform: translate(-50%,-50%); text-align: center;
+		}
+		.main h3{font-size: 3em;}
+		.main p{font-size: 1.5em; margin-bottom: 20px;}
+		.main a{
+			display: block;text-align: center;
+			width: 150px; border: 1px solid #fff; line-height: 35px;
+			color:white;border-radius: 7px; margin: 0 auto;transition: 0.3s;
+		}
+		.main a:hover{background-color: #fff; color:#000;}
+		#onView{top: 20px; transition: 0.3s; opacity:0;}
+		#onView.move{top:50%;opacity:1;}
+		#onView01{left: 20px; transition: 0.3s; opacity:0;}
+		#onView01.move01{left: 50%;opacity:1;}
 	</style>
 </head>
 <body>
@@ -46,10 +88,39 @@
 		</ul>
 	</nav>
 	<div id="fullpage">
-		<div class="section page" id="page1" data-anchor="1st">1</div>
-		<div class="section page" id="page2" data-anchor="2st">2</div>
-		<div class="section page" id="page3" data-anchor="3st">3</div>
-		<div class="section page" id="page4" data-anchor="4st">4</div>
+		<div class="section page" id="page1" data-anchor="1st">
+			<div class="scroll">
+				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+
+		<div class="section page" id="page2" data-anchor="2st">
+			<div class="main" id="onView">
+				<h3>Lorem ipsum.</h3>
+				<p>Lorem ipsum dolor sit.</p>
+				<a href="#">more</a>
+			</div>
+			<div class="scroll">
+				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+
+		<div class="section page" id="page3" data-anchor="3st">
+			<div class="main" id="onView01">
+				<h3>Lorem ipsum.</h3>
+				<p>Lorem ipsum dolor sit.</p>
+				<a href="#">more</a>
+			</div>
+			<div class="scroll">
+				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+
+		<div class="section page" id="page4" data-anchor="4st">
+			<div class="scroll">
+				<a href="#1st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

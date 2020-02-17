@@ -11,13 +11,13 @@
 			$(".contentWrap > ul > li").click(function(){
 				var liNum = $(this).index();
 				console.log(liNum);
-				$(".contentWrap>ul>li").removeClass();
-				$(this).addClass("active");
+				$(".contentWrap>ul>li").removeClass(); //removeClass: 클래스 삭제
+				$(this).addClass("active"); //addClass: 클래스 추가
 				//$("contentWrap>ul>li").eq(liNum).addClass("active");
 
-				$(".contentTxt>div").hide();
+				$(".contentTxt>div").hide(); //hide: 숨긴다
 				//$(".contentTxt>div").eq(liNum).show();
-				$(".contentTxt>div").eq(liNum).fadeIn();
+				$(".contentTxt>div").eq(liNum).show(); //fadeIn:효과를주며 보여준다
 			});
 		});
 	</script>
@@ -31,6 +31,7 @@
 		.contentWrap .contentTxt{border: 1px solid #000;}
 		.contentWrap .contentTxt div{padding: 30px;display: none;}
 		.contentWrap .contentTxt div:first-child{display: block;}
+
 	</style>
 </head>
 <body>

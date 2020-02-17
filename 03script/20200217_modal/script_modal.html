@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>modal</title>
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script src="js/jquery.colorbox.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("body").append("<div id='glayLayer'></div><div id='overLayer'></div>"); //append:자식요소 맨마지막
+			$("a.modal").click(function(e){
+				var aHref = $(this).attr("href");
+				$("#glayLayer").show();
+				$("#overLayer").show().html("<img src='"+ aHref + "'>")
+				return false; //링크취소
+				//e.preventDefault(); //링크취소
+				
+			$("#glayLayer,#overLayer").click(function(){
+				$("#glayLayer").hide();
+				$("#overLayer").hide();
+
+				});
+			$(".modal1").colorbox({rel:"modal1"});
+			$(".youtube").colorbox({
+				iframe:true,innerWidth:600,innerHeight:338
+			});	//16:9=600:x  1 x = 9*600 / 16
+		
+		});	
+		
+	
+	</script>
+	<style>
+		#glayLayer{
+			position: fixed;width: 100%;height: 100%;
+			background-color: #000; left: 0; top: 0; opacity:0.6; /* opacity:투명도; */
+			display: none;
+		}
+		#overLayer{
+			position: fixed; top: 50%; left: 50%;
+			transform: translate(-50%,-50%);
+			display: none;
+		}
+
+		ul {width: 1000px; margin: 0 auto;}
+		ul li {width: 300px; float: left; margin-right: 10px; margin-bottom: 10px;}
+		ul li:last-child {margin-right: 0;}
+		ul li img{width: 100%; display: block;}
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li>
+			<a href="../images/tourgallery_j1a.jpg" class="modal"><img src="../images/tourgallery_j1.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j2a.jpg" class="modal"><img src="../images/tourgallery_j2.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j3a.jpg" class="modal"><img src="../images/tourgallery_j3.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j4a.jpg" class="modal"><img src="../images/tourgallery_j4.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j5a.jpg" class="modal"><img src="../images/tourgallery_j5.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/embed/kqbHuuWMmsk" class="youtube"><img src="../images/tourgallery_j6.jpg" alt=""></a>
+		</li>
+
+		<li>
+			<a href="../images/tourgallery_j1a.jpg" class="modal1"><img src="../images/tourgallery_j1.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j2a.jpg" class="modal1"><img src="../images/tourgallery_j2.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j3a.jpg" class="modal1"><img src="../images/tourgallery_j3.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j4a.jpg" class="modal1"><img src="../images/tourgallery_j4.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="../images/tourgallery_j5a.jpg" class="modal1"><img src="../images/tourgallery_j5.jpg" alt=""></a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/embed/kqbHuuWMmsk" class="youtube"><img src="../images/tourgallery_j6.jpg" alt=""></a>
+		</li>
+	</ul>
+	<!-- <div id="glayLayer"></div> -->
+	<!-- <div id="overLayer"></div> -->
+</body>
+</html>
