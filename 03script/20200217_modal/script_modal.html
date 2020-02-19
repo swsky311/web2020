@@ -11,29 +11,30 @@
 	<script>
 		$(document).ready(function(){
 			$("body").append("<div id='glayLayer'></div><div id ='overLayer'><img src ='../images/tourgallery_j1a.jpg'</div>");
-			$("a.modal").click(function(event){
+			$("a.modal").click(function(e){
 				var aHref = $(this).attr("href");
 				console.log(aHref);
 				$("#glayLayer").show();
 				$("#overLayer").show().html("<img src ='" + aHref + "'>");
 				return false; //링크취소
-				//event.preventDefault(); 링크취소
+				//e.preventDefault(); //링크취소
 			});
 			$("#glayLayer,#overLayer").click(function(){
 				$("#glayLayer").hide();
 				$("#overLayer").hide();
 			});
+
 			$(".modal01").colorbox({rel:"modal01"});
 			$(".youtube").colorbox({
 				iframe:true,
 				innerWidth:600,
 				innerHeight:338
-			});
+			}); //16:9=600:X   X = 9*600 /16
 		});
 	</script>
 	<style>
 		#glayLayer{
-			position: fixed;width: 100%;height: 100%;
+			position: fixed;width: 100%;height: 100%; /* position: fixed 화면에 고정 */
 			background-color: #000;
 			left: 0;top: 0;opacity: 0.6;
 			display: none;	
@@ -43,9 +44,10 @@
 			transform: translate(-50%,-50%);
 			display: none;
 		}
+
+		ul{width: 490px;height: 300px;}
 		li{float: left;margin-right: 10px;}
 		li:last-child{margin-right: 0;}
-		ul{width: 490px;height: 300px;}
 		
 	</style>
 </head>
