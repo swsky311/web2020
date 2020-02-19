@@ -23,6 +23,12 @@
 					}
 
 					if(index ==2){
+						$("#onView").addClass("move");
+					}else{
+						$("#onView").removeClass("move");
+					}
+
+					if(index ==3){
 						$("#onView01").addClass("move01");
 					}else{
 						$("#onView01").removeClass("move01");
@@ -76,6 +82,13 @@
 		#onView.move{top:50%;opacity:1;}
 		#onView01{left: 20px; transition: 0.3s; opacity:0;}
 		#onView01.move01{left: 50%;opacity:1;}
+
+		#myVideo{
+			position: absolute;bottom: 0;top: 0;right: 0;
+			width: 100%;height: 100%;background-size: 100% 100%;
+			background-color: #000; background-position: center center;
+			object-fit:cover; z-index: 3;
+		}
 	</style>
 </head>
 <body>
@@ -89,7 +102,9 @@
 	</nav>
 	<div id="fullpage">
 		<div class="section page" id="page1" data-anchor="1st">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/DoMTrkTVcFg?autoplay=1"frameborder="0" allowfullscreen class="youtube"> </iframe>
+			<video id="myVideo" autoplay muted data-autoplay>
+				<source src="../images/video.mp4">
+			</video>
 
 			<div class="scroll">
 				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
@@ -119,8 +134,26 @@
 		</div>
 
 		<div class="section page" id="page4" data-anchor="4st">
-			<div class="scroll">
-				<a href="#1st"><img src="images/btn_scroll.png" alt=""></a>
+			<style>
+				.slide{position: relative;}
+				.slide .sView1,
+				.slide .sView2,
+				.slide .sView3,
+				.slide .sView4{position: absolute;width: 500px;height: 500px;
+					background-color: skyblue; left: 50%; transform: translate(-50%,-50%);}
+			</style>
+			<!-- div.slide*4>.sView$>lorem30 -->
+			<div class="slide">
+				<div class="sView1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quasi. Fugit cum reprehenderit beatae distinctio in saepe repellendus repellat numquam consectetur optio porro, deserunt, facere mollitia voluptas voluptate animi odit!</div>
+			</div>
+			<div class="slide">
+				<div class="sView2">Temporibus, at exercitationem sint veniam minima quia maiores aperiam corporis aut magnam, recusandae eius enim molestiae tempore repellat et, nulla, deserunt modi voluptates vitae beatae dolorum eaque. Asperiores, deleniti, voluptate?</div>
+			</div>
+			<div class="slide">
+				<div class="sView3">Cupiditate aspernatur laborum distinctio accusamus deleniti mollitia dolorem neque at ad labore modi exercitationem assumenda tenetur dolore sed quas possimus vitae pariatur, praesentium voluptate cum officiis. Repellendus cumque quam eum.</div>
+			</div>
+			<div class="slide">
+				<div class="sView4">Doloribus voluptatum quod, quam. Nulla sunt, id maiores, culpa praesentium possimus esse illum assumenda est quasi quas dolore optio eius adipisci non ab quia cumque molestiae accusantium ratione accusamus quae.</div>
 			</div>
 		</div>
 	</div>
