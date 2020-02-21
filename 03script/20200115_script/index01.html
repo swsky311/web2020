@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<img src="../../images/apple.png" alt="apple" 
+		onclick="this.src='../../images/banana.png'">
+	<br>
+
+
+	<img src="../../images/apple.png" alt="apple" 
+		onclick="han(this)">
+	<br>
+
+
+	<img src="../../images/apple.png" alt="apple" 
+		onmouseover="this.src='../../images/banana.png'"
+		onmouseout="this.src='../../images/apple.png'">
+	<br>
+	
+
+	<img src="../../images/apple.png" alt="apple" 
+		onmouseover="han(this)"
+		onmouseout="out(this)">
+
+</body>
+</html>
