@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollmenu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="../../js/jquery.mousewheel.min.js"></script>
+	<style>
+		nav.menu{background-color: #cdcdcd; width: 100%; transition: 0.3s;}
+		nav.menu.fixed{position: fixed;top: 0; background-color: #000;}
+		nav.menu.fixed a{color:#fff;}
+		nav.menu ul li{float: left; width: 20%;}
+		nav.menu ul li a{display: block; text-align: center; line-height: 40px;}
+		.contents{height: 3000px;}
+	</style>
+
+	<script>
+		//$(document).ready(function(){
+		$(function(){
+			//	$(window).scroll(function(){
+				//	var winTop = $(window).scrollTop();
+				//	console.log(winTop); //스크롤 내리면 100씩 상승
+				//	if(winTop>100){
+					//	$(".menu").addClass("fixed");
+				//	}else{
+					//	$(".menu").removeClass("fixed")
+				//	}
+			//	});
+
+			$(document).mousewheel(function(e,delta){ // e:event, delta:스크롤값
+				console.log(delta); //스크롤 올리면 1 내리면 -1
+				$(window).scroll(function(){
+					var winTop = $(this).scrollTop();
+
+					if(winTop>100){
+						if(delta>0){
+							$(".menu").addClass("fixed");
+						}else{
+							$(".menu").removeClass("fixed");
+						} //delta
+
+					}else{
+						$(".menu").removeClass("fixed")
+					} //winTop
+
+				}); //scroll end
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<nav class="menu">
+			<!-- ul>li>*5>a[#]>{menu$} -->
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+		<div class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, officia voluptatum commodi rem cumque reprehenderit eveniet quo, consectetur amet quasi quod fugit incidunt pariatur harum enim doloribus, itaque molestiae totam veniam dolore cupiditate. Illum odit magnam nihil id quasi eos error commodi, perspiciatis quisquam laboriosam, maiores harum aspernatur ea ratione, deleniti iusto! Dignissimos doloremque, ex. Fugiat asperiores, laboriosam. At possimus delectus quas maiores aut doloremque, excepturi corporis deserunt iusto inventore id, eaque non mollitia earum pariatur porro adipisci natus, reiciendis asperiores ab sapiente ad, tempora maxime ipsa. Veritatis eaque officiis voluptates quasi velit blanditiis accusantium, modi debitis, at perferendis dicta?Fugiat asperiores, laboriosam. At possimus delectus quas maiores aut doloremque, excepturi corporis deserunt iusto inventore id, eaque non mollitia earum pariatur porro adipisci natus, reiciendis asperiores ab sapiente ad, tempora maxime ipsa. Veritatis eaque officiis voluptates quasi velit blanditiis accusantium, modi debitis, at perferendis dicta?</div>
+	</div>
+</body>
+</html>
