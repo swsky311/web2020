@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position menu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+
+			//첫번째 방법
+			//var oneTop = $("#v01s").offset().top; //값 지정 선언
+			//var twoTop = $("#v02s").offset().top;
+			//var threeTop = $("#v03s").offset().top;
+
+			//$(".menu>a").eq(0).click(function(){
+				//$("html").animate({scrollTop:oneTop},300)
+			//});
+
+			//$(".menu>a").eq(1).click(function(){
+				//$("html").animate({scrollTop:twoTop},300)
+			//});
+			//$(".menu>a").eq(2).click(function(){
+				//$("html").animate({scrollTop:threeTop},300)
+			//});
+		
+
+		//2번째 방법
+		//var menu = $(".menu > a");
+		//var section =$(".scene");
+
+		//menu.click(function(){
+			//var i = $(this).index();
+			//var st = section.eq(i);offset().top;
+			//$("html").stop().animate({scrollTop:st},300);
+		//});
+
+
+		//3번째 방법
+		$(".menu a").click(function(){
+			var target = $(this.hash); //hash:#v01s
+			var st = target.offset().top;
+			$("html").stop().animate({scrollTop:st},300);
+			return false;  // 
+		});
+
+		var menu = $(".menu > a");
+		var section =$(".scene");
+
+		$(window).scroll(function(){
+			var scrollY = $(window).scrollTop();
+
+			//1번째 방법
+			//if( $(".scene").eq(0).offset().top <= scrollY){
+				//$(".menu>a").removeClass("on").eq(0).addClass("on");			
+			//}
+			//if( $(".scene").eq(1).offset().top <= scrollY){
+				//$(".menu>a").removeClass("on").eq(1).addClass("on");			
+			//}
+			//if( $(".scene").eq(2).offset().top <= scrollY){
+				//$(".menu>a").removeClass("on").eq(2).addClass("on");			
+			//}
+
+
+			//2번째 방법
+			//for(var i=0;i<3;i++){
+				//if( $(".scene").eq(i).offset().top <= scrollY){
+				//$(".menu>a").removeClass("on").eq(i).addClass("on");
+				//}
+			//}
+
+			//3번째 방법
+			section.each(function(){
+				var i = $(this).index()-1; //each는 1부터 시작함 i값은 0부터 시작하기 때문에 -1이 들어감 
+				console.log(i); //스크롤될때 1,2,3 출력 
+
+				if( $(this).offset().top<=scrollY){
+					menu.removeClass("on").eq(i).addClass("on");
+				}
+			});
+
+		});
+
+
+	});
+	</script>
+
+	<style>
+		html,body{height: 100%;}
+		.scene{
+			width: 100%; height: 100%;
+			background-attachment: fixed; /* 모바일사용불가 */
+			background-position: center;
+			background-size: cover;
+			position: relative;
+		}
+
+		.scene.one{background-image: url(../../images/pc01.jpg);}
+		.scene.two{background-image: url(../../images/pc02.jpg);}
+		.scene.three{background-image: url(../../images/pc03.jpg);}
+		
+		.scene div{
+			width: 600px; position: absolute;
+			left: 50%; top: 50%; transform: translate(-50%,-50%);
+			color:white; text-align: center;
+		}
+		.scene div h1:after{
+			content: ""; width: 100%; height: 1px; background-color: #fff;
+			display: block; margin: 10px;
+		}
+
+		.menu{
+			position: fixed; width: 100%; height: 40px;
+			background-color: skyblue; z-index: 1; padding-left: 30px;
+		}
+		.menu a{display: inline-block; line-height: 40px;}
+
+		.menu a.on{background-color:#f00;}
+	</style>
+</head>
+<body>
+	<nav class="menu">
+		<a href="#v01s" class="on">menu01</a>
+		<a href="#v02s">menu01</a>
+		<a href="#v03s">menu01</a>
+	</nav>
+	<section class="scene one" id="v01s">
+		<!-- div>h1>lorem5^p>lorem20 -->
+		<div>
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa non dolore necessitatibus quod incidunt iusto est eaque quia placeat!</p>
+		</div>
+	</section>
+
+	<section class="scene two" id="v02s">
+		<div>
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa non dolore necessitatibus quod incidunt iusto est eaque quia placeat!</p>
+		</div>
+	</section>
+
+	<section class="scene three" id="v03s">
+		<div>
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa non dolore necessitatibus quod incidunt iusto est eaque quia placeat!</p>
+		</div>
+	</section>
+</body>
+</html>
