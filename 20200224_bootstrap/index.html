@@ -11,37 +11,33 @@
 	<script src="js/bootstrap.min.js"></script>
 
 	<style>
-		/* .row{text-align: center;} */
-		.bg-skyblue{background-color: skyblue;}
+		/*.row div{text-align: center;}*/
+		.bg-skyblue{background-color:skyblue;}
 		.h100{height: 100px;}
 	</style>
 </head>
 <body>
 	<!-- <div class="container text-center text-white">
-		<duv class="row bg-primary"> 파랑
-			div.col-md-4*3>{test$}
+		<div class="row bg-primary">
 			<div class="col-sm-6 col-md-4">test4</div>
 			<div class="col-sm-6 col-md-4">test4</div>
-			<div class="d-none d-md-block col-md-4">test4</div>
-		</duv>
-		<duv class="row bg-secondary"> 회색
-			div.col-md-3*4>{test$}
+			<div class="d-none  d-md-block col-md-4">test4</div>
+		</div>
+		<div class="row bg-secondary">
 			<div class="col-md-3">test1</div>
 			<div class="col-md-3">test2</div>
 			<div class="col-md-3">test3</div>
-			<div class="col-md-3">test4</div>
-		</duv>
-		<duv class="row bg-success"> 녹색
-			div.col-md-6*2>{test$}
+			<div class="col-md-3">test3</div>
+		</div>
+		<div class="row bg-success">
 			<div class="col-md-6">test1</div>
 			<div class="col-md-6">test2</div>
 		</div>
 	</div> -->
 
 	<div class="bg-skyblue">
-		<div class="container text-center bg-primary"> 
+		<div class="container text-center bg-primary">
 			<div class="row">
-				<!-- div.col*6>{$} -->
 				<div class="col-sm-3 col-lg-6 bg-success h100">1</div>
 				<div class="col-sm-3 col-lg-6 bg-danger">2</div>
 				<div class="col-sm-3 d-lg-none bg-info">3</div>
@@ -51,11 +47,9 @@
 			</div>
 		</div>
 	</div>
-
-
-		<div class="container text-center bg-primary"> 
+	<div>
+		<div class="container text-center bg-primary">
 			<div class="row">
-				<!-- div.col*6>{$} -->
 				<div class="col bg-success h100">1</div>
 				<div class="col bg-danger">2</div>
 				<div class="col bg-info">3</div>
@@ -65,11 +59,9 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="bg-skyblue">
-		<div class="container text-center bg-primary"> 
+		<div class="container text-center bg-primary">
 			<div class="row">
-				<!-- div.col*6>{$} -->
 				<div class="col bg-success h100">1</div>
 				<div class="col bg-danger">2</div>
 				<div class="col bg-info">3</div>
@@ -79,55 +71,84 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- p-0
-	p-1 0.25  4px(16px)
-	p-2 0.5   8px(16px)
-	p-3	1     16px
-	p-4	1.5   24px
-	p-5 3     48px -->
-
+	p-1 0.25 	4px(16px)
+	p-2 0.5 	8px(16px)
+	p-3 1			16px
+	p-4 1.5 	24px
+	p-5 3 		48px -->
 
 	<div class="container mt-3">
 		<div class="row">
 			<button type="button" class="btn btn-primary">basic</button>
 			<button type="button" class="btn btn-secondary ml-2">secondary</button>
 			<button type="button" class="btn btn-outline-primary">Primary</button>
-
 		</div>
 	</div>
 
-
 	<div class="container mt-5">
-		<div class="row">
+		<div class="row">	
 			<div class="btn-group ml-auto">
-
 				<!-- samsung -->
 				<div class="btn-group">
 					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Samsung</a>
 					<div class="dropdown-menu">
-						<a href="#!" class="dropdown-item">gall 10</a>	
-						<a href="#!" class="dropdown-item">gall 20</a>	
+						<a href="#!" class="dropdown-item">gall 10</a>
+						<a href="#!" class="dropdown-item">gall 20</a>
 					</div>
 				</div>
-
+				<!-- apple -->
 				<div class="btn-group">
 					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">apple</a>
 					<div class="dropdown-menu">
-						<a href="#!" class="dropdown-item">gall 10</a>	
-						<a href="#!" class="dropdown-item">gall 20</a>	
+						<a href="#!" class="dropdown-item">iphone 10</a>
+						<a href="#!" class="dropdown-item">iphone 10</a>
+						
 					</div>
 				</div>
-
-				<div class="btn-group">
-					<a href="#!" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">sony</a>
-					<div class="dropdown-menu">
-						<a href="#!" class="dropdown-item">gall 10</a>	
-						<a href="#!" class="dropdown-item">gall 20</a>	
-					</div>
-				</div>
-				
+				<!-- sony -->
+				<a href="#!" class="btn btn-primary">Sony</a>
 			</div>
 		</div>
-<body>
+	</div>
+	<div class="container">
+		<a href="#coll" class="btn btn-primary" data-toggle="collapse">상세보기</a>
+		<button class="btn btn-secondary" data-toggle="collapse" data-target="#coll1">상세보기1</button>
+		<div id="coll" class="collapse">
+			<div class="card card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat consequuntur commodi voluptates assumenda eaque qui, molestiae accusantium fuga ex! Corporis nobis delectus omnis corrupti nulla, voluptatibus architecto error exercitationem velit autem eos cum natus nihil, ad cumque. Nulla hic maxime temporibus voluptate saepe, architecto nihil porro, fugiat quas mollitia atque tempore minima dolor perferendis! Temporibus iste, quas fugiat porro nostrum qui labore voluptate. Numquam eligendi ut culpa perferendis velit, nobis iure rem iusto fugit libero porro incidunt maxime provident aliquid nostrum atque illum, sint eveniet odio blanditiis in inventore. Architecto error modi, in nisi dicta? Quae ea voluptatibus, praesentium nulla!</div>
+		</div>
+		<div id="coll1" class="collapse">
+			<div class="card card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat consequuntur commodi voluptates assumenda eaque qui, molestiae accusantium fuga ex! Corporis nobis delectus omnis corrupti nulla, voluptatibus architecto error exercitationem velit autem eos cum natus nihil, ad cumque. Nulla hic maxime temporibus voluptate saepe, architecto nihil porro, fugiat quas mollitia atque tempore minima dolor perferendis! Temporibus iste, quas fugiat porro nostrum qui labore voluptate. Numquam eligendi ut culpa perferendis velit, nobis iure rem iusto fugit libero porro incidunt maxime provident aliquid nostrum atque illum, sint eveniet odio blanditiis in inventore. Architecto error modi, in nisi dicta? Quae ea voluptatibus, praesentium nulla!</div>
+		</div>
+	</div>
+
+	<div class="bg-dark">
+		<div class="container">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				
+				<a href="#" class="navbar-brand">LOGO</a>
+
+				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu1">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="menu1">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a href="#!" class="nav-link text-white">menu1</a>
+						</li>
+						<li class="nav-item">
+							<a href="#!" class="nav-link text-white">menu2</a>
+						</li>
+						<li class="nav-item">
+							<a href="#!" class="nav-link  text-white">menu3</a>
+						</li>
+					</ul>
+				</div>
+
+			</nav>
+		</div>
+	</div>
+
+</body>
 </html>
