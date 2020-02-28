@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>em,rem</title>
+</head>
+<style>
+	body{color:#cdcdcd;font-size: 20px}
+	.wrapper div {font-size: 2em;}
+	.wrapper1 div {font-size:2rem}
+	.top{color:blue;font-size: 2em}
+	.top>span{color:initial;font-size:initial;}
+	
+</style>
+<body>
+	<div class="wrapper">
+		<div>2em
+			<div>
+				2em
+				<div>
+					2em
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper1">
+		<div>2rem
+			<div>
+				2rem
+				<div>
+					2rem
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="top">
+		hanyoung5
+		<span>LOGO</span>
+	</div>
+</body>
+</html>

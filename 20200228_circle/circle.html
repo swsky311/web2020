@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// $(".roll").hover(function(){
+			// 	$(this).addClass("animate");
+			// },function(){
+			// 	$(this).removeClass("animate");
+			// });
+			$(window).scroll(function(){
+				console.log($(window).scrollTop());
+				if($(this).scrollTop() > 200){
+					$(".roll").addClass("animate");
+				}else{
+					$(".roll").removeClass("animate");
+				}
+			})
+		});
+	</script>
+	<style>
+		body{background-color:skyblue;}
+		.roll{width: 300px;height: 200px;background-color: #fff;position: relative;margin: 0 auto}
+		
+		.circle{
+			width: 100px;height: 100px;border: 10px solid #000;
+			border-radius:50%;position: absolute;
+			
+		}
+		@keyframes circle{
+			0%{transform:rotate(0)}
+			100%{transform:rotate(-360deg)}
+		}
+
+		.circle:after{
+			content:"";display: block;width: 1px;height: 100%;
+			background-color:#000;position: absolute;left:50%;transform: translateX(-50%);
+		}
+		.circle:before{
+			content:"";display: block;height: 1px;width: 100%;
+			background-color:#000;position: absolute;top:50%;transform: translateY(-50%);
+		}
+
+		.roll.animate .circle{
+			animation:circle 0.5s linear infinite forwards;
+		}
+
+
+		.roll div:nth-child(1){left:-100px;opacity:0;transition:0.5s;}
+		.roll.animate div:nth-child(1){left:100px;opacity:1;}
+		
+
+		.roll div:nth-child(2){right:-100px;opacity:0;transition:0.3s;}
+		.roll.animate div:nth-child(2){right:50px;opacity:1;}
+	</style>
+
+</head>
+<body>
+	<div style="height:500px"></div>
+	<div class="roll">
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div style="height:1000px"></div>
+</body>
+</html>
