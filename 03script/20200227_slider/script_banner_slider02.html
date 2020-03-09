@@ -3,53 +3,49 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>banner slider01</title>
+	<title>slider</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		#wrapper{width: 500px;height: 208px;margin: 20px auto;} /* 1 */
+		#wrapper img{width: 500px; display: block;} /* 2 */
+		#wrapper ul{width: 500px;height: 208.33px;position: relative; overflow: hidden;} /* 4 */
+		#wrapper ul li{position: absolute; left: 100%;} /* 3 */
+		#wrapper ul li:nth-child(1){left: 0;} /* 5 */
+	</style>
 
 	<script>
-		$(function(){
+		$(function(){ //1
+			//$("#wrapper li").eq(0).css("left",0).animate({left:"-100%"},1000); //2
+			//$("#wrapper li").eq(1).css({"left":"100%"}).animate({left:0},1000); //3
 
-		var current = 0;
-		var start = 0;
+			var current = 0; //1
+			var banner = $("#wrapper li") //2
+			var bannerCount = banner.length; //14
+			console.log(bannerCount); //15
 
-		function hanM(){
+			function sMove(){ //3
+				//banner.eq(current).css("left",0).animate({left:"-100%"},1000); //5
+				move(current, "0","-100%"); //12
+				current++; //6 current = current +1;
+				if(current == bannerCount) {current=0;} //9
+				//banner.eq(current).css("left","100%").animate({left:0},1000); //7
+				move(current, "100%","0"); //13
+			}
+			//sMove(); //4
+			setInterval(sMove,2000); //8
 
-		move(current,"0","0");
-			current++;
-			start++;
-			if(current==3){
-				current=0; 
-				start=0
-		}
-
-			
-		move(current,"1","1");
-		}
-
-		setInterval(hanM,1000);
-
-		function move(i,start,end){
-			$("#wrapper li").eq(i).css("z-index",start).stop().animate({"opacity":end},1000);
-			};
+			function move(i,start,end){ //10 i,start,end는변수이름 (매개변수)
+				banner.eq(i).css("left",start).animate({left:end},1000); //11
+			}
 
 		});
 	</script>
-
-	<style>
-		img{display: block; width: 500px;}
-		#wrapper{width: 500px; height: 208px; margin: 20px auto;}
-		#wrapper ul{width: 500px; height: 208px; background-color: skyblue; position: relative; overflow: hidden;}
-		#wrapper ul li{position: absolute; top: 0; opacity:0;}
-		#wrapper ul li:first-child{opacity:1;}
-		
-	</style>
 </head>
 <body>
 	<div id="wrapper">
-		<!-- ul>li*3>img[src="../../images/pc0$.jpg"] -->
 		<ul>
-			<li><img src="../../images/pc01.jpg" alt=""></li>
+			<li><img src="../../images/pc01.jpg" alt=""></li> 
 			<li><img src="../../images/pc02.jpg" alt=""></li>
 			<li><img src="../../images/pc03.jpg" alt=""></li>
 		</ul>
