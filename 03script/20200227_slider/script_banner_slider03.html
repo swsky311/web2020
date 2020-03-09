@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		#wrapper{width: 500px;height: 238px;margin: 20px auto; background-color: skyblue;} /* 1 */
+		#wrapper img{width: 500px; display: block;} /* 2 */
+		#wrapper ul.slider{width: 500px;height: 208.33px;position: relative; overflow: hidden;} /* 4 */
+		#wrapper ul.slider li{position: absolute; left: 100%;} /* 3 */
+		#wrapper ul.slider li:nth-child(1){left: 0;} /* 5 */
+	</style>
+
+	<script>
+		$(function(){ //1
+			var current = 0; //2
+			var banner = $("ul.slider li"); //3
+			var bCount = banner.length; //4
+			var i;  //8
+			var overBtn = false; //24 
+
+			function nextSlider(){ //5
+				if(overBtn == false){ //25 버튼연속클릭
+					overBtn = true; //26 버튼이 한번만 실행된다
+					i = current + 1; //9
+					if (i==bCount){ //18
+						i=0; 
+						current=bCount-1;
+					} 
+
+					var currentEl = banner.eq(current); //6
+					var nextEl = banner.eq(i); //7
+
+					currentEl.css({left:0}).stop().animate({left:"-100%"},1000); //20
+					nextEl.css({left:"100%"}).stop().animate({left:0},{duraltion:1000,
+					complete:function(){overBtn=false;}}); //21 콜백함수 (버튼이 연속으로 클릭된다)
+
+					current = i; //10
+				}	
+			}
+
+			function prevSlider(){ //11
+				if(overBtn == false){ //27
+					overBtn = true; //28
+					i = current -1; //14
+					if(i== -1){ //19
+						i=bCount-1;
+						current = 0;
+					} 
+					var currentEl = banner.eq(current); //12
+					var nextEl = banner.eq(i); //13
+
+					currentEl.css({left:0}).stop().animate({left:"100%"},1000); //22
+					nextEl.css({left:"-100%"}).stop().animate({left:0},{duraltion:1000,
+					complete:function(){overBtn=false;}}); //23
+
+					current = i; //15
+				}	
+			}
+
+			$(".bt_next").click(function(){ //16
+				nextSlider();
+				console.log(current);
+			});	
+			$(".bt_prev").click(function(){ //17
+				prevSlider();
+				console.log(current);
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<ul class="slider">
+			<li><img src="../../images/pc01.jpg" alt=""></li> 
+			<li><img src="../../images/pc02.jpg" alt=""></li>
+			<li><img src="../../images/pc03.jpg" alt=""></li>
+		</ul>
+
+		<div class="btn">
+			<span class="bt_prev">이전</span>
+			<span class="bt_next">다음</span>
+		</div>
+	</div>
+</body>
+</html>
