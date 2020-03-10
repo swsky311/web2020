@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="../../js/jquery.mousewheel.min.js"></script>
+
+	<style>
+		#wrapper{width: 500px;height: 258px;margin:20px auto;background-color:skyblue;}
+		#wrapper img{width: 500px;display: block;}
+		#wrapper ul.slider{width: 500px;height: 208.33px;position: relative;overflow: hidden;}
+		#wrapper ul.slider li{position: absolute;left:100%;}
+		#wrapper ul.slider li:nth-child(1){left:0;}
+		#wrapper .pager span{
+			width: 20px;height: 20px; background-color: #fff;
+			display:inline-block; border-radius: 10px; text-indent:-9999px;
+			cursor:pointer;
+		}
+		#wrapper .pager span.active{background-color: #f00;}
+	</style>
+	<script>
+		$(function(){
+			var current = 0;
+			var banner = $("ul.slider li");
+			var bCount = banner.length;
+			var i;
+			var overBtn = false; //중복실행
+			var pager = $(".pager>span");
+			
+			//다음실행
+			$(".bt_next").click(function(){
+				if(overBtn==false){
+				 		overBtn=true;
+						i = current + 1;
+						if(i==bCount){
+							i=0;
+							current=bCount-1;
+						}
+					slideView("next");
+				}
+			});
+
+			//이전실행
+			$(".bt_prev").click(function(){
+				if(overBtn==false){
+					overBtn=true;
+					i = current - 1;
+					if(i==-1){
+						i=bCount-1;
+						current=0;
+					}
+					slideView("prev");
+				}
+			});
+
+
+			function slideView(view){
+
+				var currentEl = banner.eq(current);
+				var nextEl = banner.eq(i);
+
+				pager.removeClass("active").eq(i).addClass("active")
+
+				if(view=="next"){
+					currentEl.css({left:0}).stop().animate({left:"-100%"},1000);
+					nextEl.css({left:"100%"}).stop().animate({left:0},{duration:1000,complete:function(){overBtn=false;}});
+				}else{
+					currentEl.css({left:0}).stop().animate({left:"100%"},1000);
+					nextEl.css({left:"-100%"}).stop().animate({left:0},{duration:1000,complete:function(){overBtn=false;}});
+				}
+				current = i;
+			}
+
+
+
+			//자동실행
+			function trigger(){
+			$(".bt_next").trigger("click");
+			}
+			//setInterval(trigger,3000); //3초간격으로 자동으로 움직인다
+
+			//pager
+			pager.click(function(){
+				i = $(this).index();
+				slideView("next");
+			});
+
+			//마우스스크롤
+			$(window).mousewheel(function(event,delta){ //스크롤 내리면 이동한다 delta:스크롤 값
+				if(delta<0){
+					$(".bt_next").trigger("click");
+				}
+				if(delta>0){
+					$("bt_prev").trigger("click");
+				}
+			});
+
+
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<ul class="slider">
+			<li><img src="../../images/pc01.jpg" alt=""></li>
+			<li><img src="../../images/pc02.jpg" alt=""></li>
+			<li><img src="../../images/pc03.jpg" alt=""></li>
+		</ul>
+		<div class="pager">
+			<!-- span*3>{$} -->
+			<span class="active">1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+		<div class="btn">
+			<span class="bt_prev">이전</span>
+			<span class="bt_next">다음</span>
+		</div>
+
+	</div>
+</body>
+</html>
