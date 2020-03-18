@@ -18,7 +18,7 @@
 		.bg-skyblue{background-color:skyblue;}
 
 
-
+		
 		.move1st{position: relative;height:300px;}
 		.note{
 			width: 200px;position: absolute;_left:50%;
@@ -38,6 +38,25 @@
 
 		.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 		.st1{fill:#F0F2F5;stroke:#323233;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+		line.st0{
+			stroke-dasharray:185;
+			stroke-dashoffset:185;
+			
+		}
+		@keyframes line1Ani{
+			to{stroke-dashoffset:0;}
+		}
+
+		.move1st.animate line.st0{
+			animation:line1Ani 1s forwards;
+		}
+		
+		.move1st line.st0.l11{animation-delay:0.5s}
+		.move1st line.st0.l12{animation-delay:1s}
+
+
+
 	</style>
 	<script>
 		
@@ -50,12 +69,19 @@
 				}else{
 					$(".move1st").removeClass("animate");
 				}
+
+				if(sTop > 500){
+					$(".menu-top").addClass("fixed-top");
+				}else{
+					$(".menu-top").removeClass("fixed-top");
+				}
+
 			});
 		
 	</script>
 </head>
 <body>
-<div class="bg-dark fixed-top">
+<div class="bg-dark menu-top">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,9 +142,9 @@
 								<line class="st0" x1="226.469" y1="86.465" x2="226.469" y2="49.128"/>
 							</g>
 						</g>
-						<line class="st0" x1="94.604" y1="160.212" x2="278.881" y2="160.212"/>
-						<line class="st0" x1="94.604" y1="197.067" x2="278.881" y2="197.067"/>
-						<line class="st0" x1="94.604" y1="233.923" x2="278.881" y2="233.923"/>
+						<line class="st0 l10" x1="94.604" y1="160.212" x2="278.881" y2="160.212"/>
+						<line class="st0 l11" x1="94.604" y1="197.067" x2="278.881" y2="197.067"/>
+						<line class="st0 l12" x1="94.604" y1="233.923" x2="278.881" y2="233.923"/>
 					</svg>					
 				</div>
 			</div>
@@ -130,6 +156,8 @@
 		</div>
 	</div>
 </div>
+
+
 <div style="height: 1000px;"></div>
 
 
