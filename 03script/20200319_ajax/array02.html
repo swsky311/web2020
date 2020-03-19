@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		var view = [
+			["잉코","img1.jpg"],
+			["장미꽃","img2.jpg"],
+			["거위","img3.jpg"],
+			["바이킹","img4.jpg"],
+			["놀이동산","img5.jpg"],
+			["거위","img6.jpg"],
+			["잉코2","img7.jpg"]
+		];
+		$(function(){
+			var text="";
+
+			for(var i=0;i<view.length;i++){
+				text+= "<li>"
+				text+= "<img src='../../images/"+view[i][1]+"'>";
+				text+= "<span>"+view[i][0]+"</span>";
+				text+= "</li>"
+			}
+
+			$(".han").append(text);
+
+		});
+		
+
+	</script>
+	<style>
+		.wrap{width: 1000px;margin: 0 auto}
+		ul>li{float: left;margin-right:10px;width: 242.5px;}
+		ul>li:nth-child(4){margin-right:0;}
+		ul>li img{width: 100%;display: block;}
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<ul class="han clearfix">
+			
+		</ul>
+	</div>
+	
+</body>
+</html>

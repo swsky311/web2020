@@ -1,8 +1,0 @@
-@charset "utf-8";
-
-header#main_header{background-color:skyblue;}
-header#main_header>div.main_util{border-bottom: 1px solid #ddd;}
-header#main_header>div.main_util>nav.util_menu{
-	width: 980px;margin: 0 auto;
-	background-color:pink;
-}
