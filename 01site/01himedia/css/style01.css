@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-header#header_wrap{background-color: skyblue;}
-header#header_wrap>div.header_util{border-bottom: 1px solid #ddd;}
-header#header_wrap>div.header_util>nav.util_menu{width: 980px; margin: 0 auto; background-color: pink;}
-
-nav.util_menu>ul{float: left;}
-nav.util_menu>ul>li{float: right;}
-nav.util_menu>ul>li>a{display: block; line-height: 30px; text-align: center; padding: 0 20px;}
