@@ -10,12 +10,12 @@ header#main_header>div.main_util>nav.util_menu{
 nav.util_menu>ul{float: right;_width:300px;}
 nav.util_menu>ul>li{float: left;position: relative;}
 nav.util_menu>ul>li>a{
-	display: block;line-height: 30px;text-align: center;
-	padding:0 20px;
+	display: block;line-height: 30px;text-align: center; /* line-height: 텍스트와 줄 간격을 맞춰줌 */
+	padding:0 20px; /* 0상하 20좌우 */
 }
-nav.util_menu>ul>li:after{
+nav.util_menu>ul>li:after{  /* line-height 30px= top:10px,height:10px,자동bottom10px */
 	content:"";display: block;width:1px;height:10px;background-color: #f00;
-	position: absolute;top:10px;
+	position: absolute;top:10px; 
 }
 nav.util_menu>ul>li:first-child:after{
 	content:"";display: none;
