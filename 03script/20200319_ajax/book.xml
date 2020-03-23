@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books> <!-- book의 갯수 -->
+	<book>
+		<title>타인의 해석</title>
+		<author>말콤 글래드 웰</author>
+		<bookimg>01.jpg</bookimg>
+		<price>20,000</price>
+	</book>
+	<book>
+		<title>이상한 수학책</title>
+		<author>벤 올린</author>
+		<bookimg>02.jpg</bookimg>
+		<price>20,000</price>
+	</book>
+	<book>
+		<title>배심원단</title>
+		<author>마이클 코널리</author>
+		<bookimg>03.jpg</bookimg>
+		<price>20,000</price>
+	</book>
+</books>

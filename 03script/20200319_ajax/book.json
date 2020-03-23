@@ -1,0 +1,23 @@
+{
+	"book":[
+		{
+			"title":"타인의 해석",
+			"author":"말콤 글래드 웰",
+			"bookimg":"01.jpg",
+			"price":"20,000"
+		},
+		{
+			"title":"이상한 수학책",
+			"author":"벤 올린",
+			"bookimg":"02.jpg",
+			"price":"20,000"	
+		},
+		{
+			"title":"배심원단",
+			"author":"마이클 코널리",
+			"bookimg":"01.jpg",
+			"price":"20,000"		
+		}	
+
+	]
+}
