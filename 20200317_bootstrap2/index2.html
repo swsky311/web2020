@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!-- 반응형 맞춰줌 --> 
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="UTF-8">
 	<title>homepage</title>
 	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
@@ -24,25 +24,23 @@
 <body>
 <div class="bg-primary">
 	<div class="container">
-		<!-- https://hackerthemes.com/bootstrap-cheatsheet/ 
-			 navbar navbar-expand -->
-		 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		  
 		  <a class="navbar-brand" href="#!">Navbar</a>
 		
 		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
+		    -
 		  </button>
 		
 		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		    <ul class="navbar-nav ml-auto mt-2 mt-md-0">
-		      <li class="nav-item active">
+		      <li class="nav-item">
 		        <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="#!">MENU01</a>
 		      </li>
-		      <li class="nav-item">
+		      <li class="nav-item active">
 		        <a class="nav-link" href="#!">MENU02</a>
 		      </li>
 		      <li class="nav-item">
@@ -56,7 +54,7 @@
 		</nav>
 	</div>
 </div>
-<div class="header-wrap pb-5"> 
+<div class="header-wrap pb-5">
 	<div class="container text-center text-white">
 		<h1 class="pt-5">Lorem ipsum dolor sit amet.</h1>
 		<h4 class="mt-4 pb-5">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Non, voluptate?</h4>
@@ -72,10 +70,10 @@
 		<p class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit. Asperiores, consequuntur!</p>
 	</div>
 </div>
-<section class="gray py-5"> <!-- py-5 위아래를 벌려준다 pt-5 pb-5와 같다 -->
+<section class="gray py-5">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-5 text-center text-md-left mb-5"> <!-- 모바일 화면에서 꽉 참 col-12는 기본값이므로 생략 가능함 --> 
+			<div class="col-12 col-md-5 text-center text-md-left mb-5">
 				<h2>Lorem ipsum dolor sit.</h2>
 				<p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic consectetur excepturi vero odio quae eos ratione ipsum aliquid quas officia.</p>
 				<a href="#!" class="btn btn-primary mt-3 d-block d-md-inline">more</a>
@@ -115,8 +113,50 @@
 		</div>
 	</div>
 </section>
-
-
+<section class=" py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card">
+				  <img class="card-img-top" src="../images/testimg.jpg" alt="Card image"  style="width: 100%;">
+				  <div class="card-body">
+				    <h4 class="card-title">John Doe</h4>
+				    <p class="card-text">Some example text.</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card">
+				  <img class="card-img-top" src="../images/testimg.jpg" alt="Card image"  style="width: 100%;">
+				  <div class="card-body">
+				    <h4 class="card-title">John Doe</h4>
+				    <p class="card-text">Some example text.</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div><div class="col-md-3">
+				<div class="card">
+				  <img class="card-img-top" src="../images/testimg.jpg" alt="Card image"  style="width: 100%;">
+				  <div class="card-body">
+				    <h4 class="card-title">John Doe</h4>
+				    <p class="card-text">Some example text.</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div><div class="col-md-3">
+				<div class="card">
+				  <img class="card-img-top" src="../images/testimg.jpg" alt="Card image"  style="width: 100%;">
+				  <div class="card-body">
+				    <h4 class="card-title">John Doe</h4>
+				    <p class="card-text">Some example text.</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <section class="py-5">
 	<div class="container">
 		<div class="row">
@@ -145,7 +185,7 @@
 				<p>TODAY UPLOADS</p>
 			</div>
 			<div class="col-4">
-				<h3 class="mb-3">클릭하세요</h3> <!-- 클릭하면 모달창 뜸 --> 
+				<h3 class="mb-3">클릭하세요</h3>
 				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal">SIGN UP NOW</button>
 			</div>
 			<div class="col-2">
@@ -167,8 +207,6 @@
 
 
 <!-- modal -->
-<!-- https://hackerthemes.com/bootstrap-cheatsheet/ 
-modal modal-sm -->
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content p-5">

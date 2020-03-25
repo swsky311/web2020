@@ -4,160 +4,260 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>HOMEPAGE</title>
-	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="css/bootstrap4-retro.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<style>
-		.bg-img1{background-image: url(images/bg.png);}
-		/*height*/
-		.h-300{height: 300px;}
-
-		/*bgcolor*/
-		.bg-skyblue{background-color:skyblue;}
-
-
-		
-		.move1st{position: relative;height:300px;}
-		.note{
-			width: 200px;position: absolute;_left:50%;
-			transform:translateX(-50%);
-			opacity:0;
-			/*animation:mAni1st 1s forwards;*/
+		.h-100p{height: 100px;}
+		.view01{position: relative;}
+		.view01 svg{position: absolute;bottom: 0;}
+		.next_slick{
+			position: absolute;right:0;cursor:pointer;width:50px;
+			top:50%;transform:translateY(-50%);
 		}
-		@keyframes mAni1st{
-			from{opacity:0;left:0;}
-			to{opacity:1;left:50%;}
+		.prev_slick{
+			position: absolute;left:0;cursor:pointer;width:50px;
+			top:50%;transform:translateY(-50%);
 		}
-
-		.move1st.animate .note{
-			animation:mAni1st 1s forwards;
-		}
-
-
-		.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-		.st1{fill:#F0F2F5;stroke:#323233;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-
-		line.st0{
-			stroke-dasharray:185;
-			stroke-dashoffset:185;
-			
-		}
-		@keyframes line1Ani{
-			to{stroke-dashoffset:0;}
-		}
-
-		.move1st.animate line.st0{
-			animation:line1Ani 1s forwards;
-		}
-		
-		.move1st line.st0.l11{animation-delay:0.5s}
-		.move1st line.st0.l12{animation-delay:1s}
-
-
-
+		.slick-slider{margin: 30px auto 50px;}
 	</style>
-	<script>
-		
-			$(window).scroll(function(){
-				var sTop = $(this).scrollTop();
-				var move1st = $(".move1st").offset().top;
-				console.log(sTop+"/"+move1st);
-				if(sTop > move1st-400){
-					$(".move1st").addClass("animate");
-				}else{
-					$(".move1st").removeClass("animate");
-				}
-
-				if(sTop > 500){
-					$(".menu-top").addClass("fixed-top");
-				}else{
-					$(".menu-top").removeClass("fixed-top");
-				}
-
-			});
-		
-	</script>
 </head>
 <body>
-<div class="bg-dark menu-top">
-	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- https://hackerthemes.com/bootstrap-cheatsheet/ navbar-expand -->
-		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-		  <a class="navbar-brand" href="#!">LOGO</a>
+	<div class="bg-dark">
 		
-		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-		    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-		      <li class="nav-item active">
-		        <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#!">naver</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#!">daum</a>
-		      </li>
-		    </ul>
-		  </div>
-		</nav>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			  
+			  <a class="navbar-brand" href="#!">Navbar</a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			    <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
+			      </li>
+		        <li class="nav-item dropdown">
+				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+				        회사소개
+				      </a>
+				      <div class="dropdown-menu dropdown-menu-right">
+				        <a class="dropdown-item" href="#">Link 1</a>
+				        <a class="dropdown-item" href="#">Link 2</a>
+				        <a class="dropdown-item" href="#">Link 3</a>
+				      </div>
+			    	</li>
+			    	<li class="nav-item dropdown">
+				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+				        제품소개
+				      </a>
+				      <div class="dropdown-menu dropdown-menu-left">
+				        <a class="dropdown-item" href="#">Link 1</a>
+				        <a class="dropdown-item" href="#">Link 2</a>
+				        <a class="dropdown-item" href="#">Link 3</a>
+				      </div>
+			    	</li>
+			    </ul>
+			
+			    <!-- search -->
+			  </div>
+			</nav>
+		</div>
 	</div>
-</div>
+	<div class="container-fluid px-0 view01">
+			<picture>
+				<source media="(max-width:500px)" srcset="../images/lime-300.jpg">
+				<source media="(max-width:700px)" srcset="../images/lime-740.jpg">
+				<source media="(max-width:1199px)" srcset="../images/lime-1000.jpg">
+				<source media="(min-width:1200px)" srcset="../images/lime.jpg">
+				<img src="../images/lime.jpg" class="w-100" alt="">
+			</picture>
+			<div class="text-info">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+		</div>
+	</div>
+<style>
+	.text-truncate { 
+		display: inline-block; 
+
+	}
 
 
-<div class="jumbotron jumbotron-fluid bg-img1 text-white d-flex align-items-center "  style="height:500px">
-  <div class="container d-flex flex-column align-items-center bg-primary">
-		<h1>Fluid jumbotron</h1>
-    	<p class="d-none d-md-block">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</div>
+</style>
 
-
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-md-6 move1st">
-				<div class="note">
-					<svg id="Layer_1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 368.334 361.667" >
-						
-						<g>
-							<path class="st0" d="M311.418,61.67V34.139c0-11.633,7.354-21.522,17.916-25.355H102.367c-48.529,0-43.673,54.125-43.673,54.125
-								V348.38c0,0,215.847,0,217.183,0c19.629,0,35.541-15.91,35.541-35.539v-85.558V98.289V62.907
-								C311.418,62.907,311.406,62.458,311.418,61.67z"/>
-						</g>
-						<g>
-							<path class="st1" d="M44.745,348.38c0.444,0,228.501,0,228.501,0c-19.629,0-35.541-15.91-35.541-35.539v-35.539H9.206v35.539
-								C9.206,332.47,25.116,348.38,44.745,348.38z"/>
-						</g>
-						<path class="st1" d="M358.803,85.127V30.662c0-12.56-10.67-22.74-23.693-22.74s-23.691,10.181-23.691,22.74v54.465H358.803z"/>
-						<g>
-							<path class="st0" d="M206.133,101.577"/>
-							<path class="st0" d="M206.133,101.577"/>
-							<polyline class="st0" points="150.613,138.408 187.942,60.327 222.873,139.094 	"/>
-							<line class="st0" x1="167.051" y1="103.82" x2="206.435" y2="103.82"/>
-							<g>
-								<line class="st0" x1="207.8" y1="67.797" x2="245.138" y2="67.797"/>
-								<line class="st0" x1="226.469" y1="86.465" x2="226.469" y2="49.128"/>
-							</g>
-						</g>
-						<line class="st0 l10" x1="94.604" y1="160.212" x2="278.881" y2="160.212"/>
-						<line class="st0 l11" x1="94.604" y1="197.067" x2="278.881" y2="197.067"/>
-						<line class="st0 l12" x1="94.604" y1="233.923" x2="278.881" y2="233.923"/>
-					</svg>					
+	<div class="bg-info py-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-3 bg-danger d-flex">
+					<div class="m-auto bg-white">안녕하세요</div>
 				</div>
-			</div>
-			<div class="col-12 col-md-6">
-				<h2>Lorem ipsum dolor sit amet.</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ut veritatis, neque error voluptas itaque consequuntur ad rem laborum nulla, velit, nihil tenetur sunt obcaecati consectetur, a tempore quod alias.</p>
-				<div class="btn btn-primary">more</div>
+				<div class="col-9 text-white">
+					<div class="row">
+						<div class="col-12 col-md-4 bg-success py-2 text-truncate d-inline-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorum hic officia saepe modi odio optio accusantium, aliquid earum voluptatem sapiente totam, </div>
+						<div class="col-12 col-md-4 bg-dark py-2">2</div>
+						<div class="col-12 col-md-4 bg-success py-2">3</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+
+	<div>
+		<div class="container">
+			<div class="row">
+				<div class="d-none d-md-block col-md-2 bg-light"></div>
+				<div class="col-md-8 bg-primary">
+					<div class="row">
+						<div class="slick01 w-100">
+							<div><img src="images/lime.jpg" alt="" class="w-100"></div>
+							<div><img src="images/lime.jpg" alt="" class="w-100"></div>
+							<div><img src="images/lime.jpg" alt="" class="w-100"></div>
+							<div><img src="images/lime.jpg" alt="" class="w-100"></div>
+							<div><img src="images/lime.jpg" alt="" class="w-100"></div>
+						</div>
+						<div class="next_slick"><img src="images/btn_right.png" alt="" class="w-100"></div>
+						<div class="prev_slick"><img src="images/btn_left.png" alt="" class="w-100"></div>
+					</div>
+				</div>
+
+				<div class="d-none d-md-block col-md-2 bg-light"></div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 d-none d-md-block"></div>
+					<div class="col-md-8"><img src="images/lime.jpg" alt="" class="w-100"></div>
+					<div class="col-md-2 d-none d-md-block"></div>
+				</div>
+			</div>
+
+	</div>
 
 
-<div style="height: 1000px;"></div>
+	<div class="container count">
+		<div class="row text-center">
+			<div class="col-4"><span class="han1">0</span>업체</div>
+			<div class="col-4"><span class="han2">0</span>업체</div>
+			<div class="col-4"><span class="han3">0</span>업체</div>
+		</div>
+	</div>
+	<div style="height: 1000px;"></div>
+
+	<script>
+		var count1 = 0;
+		var num1 =0;
+		var count2 = 0;
+		var num2 =0;
+		var count3 = 0;
+		var num3 =0;
+
+		$(window).scroll(function(){
+			var sTop = $(this).scrollTop();
+			console.log(sTop);
+
+			if(sTop > 1000){
+					if(num1 == 0){
+						count1 = 0;
+						count2 = 0;
+						count3 = 0;
+						num1 = setInterval(cnum1,50);
+						num2 = setInterval(cnum2,50);
+						num3 = setInterval(cnum3,50);
+					}
+				
+				}else{
+				
+					$(".han1").text("0");
+					$(".han2").text("0");
+					$(".han3").text("0");
+
+					if(num1 != 0){
+						clearInterval(num1);
+						clearInterval(num2);
+						clearInterval(num3);
+						num1 = 0;
+					}
+
+				
+
+			}
+		});
+				
+				function cnum1(){
+						if(count1<100){
+							count1 = count1+5;
+						}
+						$(".han1").text(count1);
+				}
+
+				function cnum2(){
+						if(count2<200){
+							count2 = count2+10;
+						}
+						$(".han2").text(count2);
+				}
+
+				function cnum3(){
+						if(count3<300){
+							count3 = count3+30;
+						}
+						$(".han3").text(count3);
+				}
+	
+	</script>
+	<script>
+		$('.slick01').slick({
+		  centerMode:true,
+		  centerPadding:'10px',
+		  dots: false,
+		  infinite: true,
+		  speed: 300,
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  autoplay: true,
+  		autoplaySpeed: 2000,
+  		nextArrow: '.next_slick',
+  		prevArrow: '.prev_slick',
+		  responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2,
+		        infinite: true
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
+		});
+				
+	</script>
+
 
 
 </body>
