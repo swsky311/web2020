@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>오늘의 날씨</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;box-sizing:border-box;}
+		li{list-style:none}
+		a:visited,a:link{text-decoration:none;color:black;}
+		.clearfix:after{content:"";display: block;clear: both;}
+		
+
+		#weather_info{
+			width: 236px;height:330px;margin: auto;
+			background-color:skyblue;
+			border: 1px solid #000;
+			position: relative;
+			background-image: url(img/bg-img2.jpg);
+			
+		}
+		h1{text-align: center; color:#fff;}
+		h3{text-align: center; color:#fff;}
+		p.w_id,div.icon,p.temp,div.tempWrap{position: absolute;}
+		p.w_id{top:80px;left:40%;}
+		div.icon{top:100px;left:40%;}
+		p.temp{
+			top:160px;left:50%;
+			transform:translateX(-50%);
+			font-size:3em;
+
+		}
+		div.tempWrap{
+			top:260px;left:50%;
+			transform:translateX(-50%);
+			color:#fff;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<select name="inpCity" id="inpCity">
+		<option value="seoul">서울</option>
+		<option value="busan">부산</option>
+		<option value="paju">파주</option>
+	</select>
+	<div id="time-result"></div>
+	<div id="weather_info">
+		<h1 class="city">seoul </h1>
+		<h3 class="time">TUESDAY 9:00 AM</h3>
+		<section>
+			<p class="w_id">clear</p>
+			<div class="icon">icon</div>
+			<p class="temp">9</p>
+			<div class="tempWrap">
+				<p class="temp_max">최대</p>
+				<p class="temp_min">최소</p>
+			</div>
+		</section>
+	</div>
+
+	<script>
+	loca("seoul");
+	
+
+	$("#inpCity").change(function(){
+		$("#inpCity option:selected").each(function(){
+			console.log($(this).val());
+			var lo = $(this).val();
+			loca(lo);
+		});
+	});
+
+	function loca(location){
+		var url = 'http://api.openweathermap.org/data/2.5/weather?q='+location+'&APPID=4eedfeb184dc7cb08af6c0bd529c48b9';
+
+
+		$.getJSON(url,function(data){
+			var sys = data.sys; 			// 국가명, 일출/일몰			
+			var city = data.name; 			// 도시명
+
+
+			var weather = data.weather; 	// 날씨 객체
+			var wmain = weather[0].main; 	// 구름 상태(Cloudiness)
+			var w_id = weather[0].id; 		// 날씨상태 id 코드
+			var icon = weather[0].icon;		// 날씨 아이콘 정보
+
+			var country = sys.country;  	// 국가명
+
+			var main = data.main;  			// 온도 기압 관련 객체
+			var temp = main.temp; 			// 현재 온도
+			var temp_min = main.temp_min 	// 최저 온도
+			var temp_max = main.temp_max 	// 최고 온도
+
+			// 날씨 아이콘
+			var icon_url = 'img/' + icon+'.png';
+
+			$(".city").html(city);
+			$(".icon").html("<img src='"+icon_url+"'>");
+			$(".w_id").html(wmain);
+			$(".temp").html(parseInt(temp-273.15)+"&deg;");
+			$(".temp_max").html(parseInt(temp_max-273.15)+"&deg; max");
+			$(".temp_min").html(parseInt(temp_min-273.15)+"&deg; min");
+		});
+	}	
+
+	</script>
+</body>
+</html>
