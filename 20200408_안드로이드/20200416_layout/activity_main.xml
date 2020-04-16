@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/grad"
+                 >
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/image11"
+                    android:layout_marginLeft="16dp"
+                     android:layout_marginTop="16dp"
+                     android:layout_marginBottom="16dp"
+                     android:id="@+id/topImg"
+                     />
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_toRightOf="@id/topImg"
+                     android:layout_alignBottom="@id/topImg"
+                     android:layout_marginLeft="16dp"
+                     android:id="@+id/view01"
+                     >
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_thumb_up"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="15"
+                         android:textColor="#fff"
+                         android:layout_marginLeft="10dp"/>
+                     <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:src="@drawable/ic_thumb_down"
+                         android:layout_marginLeft="10dp"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="1"
+                         android:textColor="#fff"
+                         android:layout_marginLeft="10dp"/>
+
+                 </LinearLayout>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                    android:text="2014.07.23 개봉 \n액션 / 137분"
+                     android:textColor="#fff"
+                     android:textSize="18sp"
+                     android:layout_above="@id/view01"
+                     android:layout_alignLeft="@id/view01"
+                     android:layout_marginBottom="20dp"
+                     android:id="@+id/view02"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="군도"
+                     android:textStyle="bold"
+                     android:textColor="#fff"
+                     android:textSize="25sp"
+                     android:id="@+id/title"
+                     android:layout_above="@id/view02"
+                     android:layout_alignLeft="@id/view02"
+                     android:layout_marginBottom="15dp"
+                     />
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/ic_15"
+                     android:layout_toRightOf="@id/title"
+                     android:layout_alignTop="@id/title"
+                     android:layout_marginLeft="10dp"/>
+
+             </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="1"
+                   >
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="예매율"
+                       android:gravity="center"/>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="5위 1.8%"
+                       android:gravity="center"/>
+               </LinearLayout>
+                <View
+                    android:layout_width="2px"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="평점" />
+
+                    <RatingBar
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:isIndicator="false"
+                        android:max="5"
+                        android:numStars="5"
+                        android:rating="3.5"
+                        android:stepSize="0.5" />
+                </LinearLayout>
+                <View
+                    android:layout_width="2px"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="누적관객수"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="839,000"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="#ccc"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="줄거리"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="#ccc"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한줄평"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="작성하기"
+                    android:id="@+id/oneWrite"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorAccent"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_review_selected"
+                   android:layout_toLeftOf="@id/oneWrite"
+                   android:layout_alignTop="@id/oneWrite"
+                    android:layout_alignBottom="@id/oneWrite"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/btn"
+                android:text="모두보기"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:layout_margin="10dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="#ccc"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:padding="16dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_facebook"
+                    android:layout_weight="1"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_kakao"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:background="@color/colorAccent"
+                    android:text="예매하기"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="#ccc"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
