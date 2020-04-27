@@ -13,26 +13,30 @@
 		
 
 		#weather_info{
-			width: 236px;height:330px;margin: auto;
+			width: 100%;height:856px;margin: auto;
 			background-color:skyblue;
 			border: 1px solid #000;
 			position: relative;
-			background-image: url(img/bg-img2.jpg);
+			background-image: url(img/weather.png);
+			background-repeat: no-repeat;
+			background-position:center;
+		   	background-size: auto,cover;
 			
 		}
-		h1{top: 100px; text-align: center; color:#fff;}
-		h3{text-align: center; color:#fff;}
+		h1{padding-top:100px; text-align: center; color:#fff;}
+		h3{padding-top:10px;text-align: center; color:#fff;}
 		p.w_id,div.icon,p.temp,div.tempWrap{position: absolute;}
-		p.w_id{top:80px;left:40%;}
-		div.icon{top:100px;left:40%;}
+		p.w_id{top:200px;left:40%; color:#fff}
+		div.icon{top:230px;left:40%; color:#fff}
 		p.temp{
-			top:160px;left:50%;
+			top:280px;left:50%;
 			transform:translateX(-50%);
 			font-size:3em;
+			color:#fff;
 
 		}
 		div.tempWrap{
-			top:260px;left:50%;
+			top:350px;left:50%;
 			transform:translateX(-50%);
 			color:#fff;
 		}
