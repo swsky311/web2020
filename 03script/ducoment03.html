@@ -9,19 +9,27 @@
 
 <script>
 	var array = ["서울","부산"];
-	document.write(array[1]+"<br>");
-
+	/*document.write(array[1]+"<br>");
+*/
 	var object = {
-		name:"자연코드",
-		cost:30000,
-		author:"다니엘쉬프만"
-		bill:function(){
+		name:"책이름 : 자연코드",
+		cost:"가격:30000",
+		author:"저자:다니엘쉬프만",
+		isbn:"ISBN:9788968481901",
+		page:"페이지수:620페이지"
 			
 		}
-	}
+	
 
-	document.write(object.name+"<br>");
-	document.write(object["name"]);
+	/*document.write(object.name+"<br>");*/
+	document.write(object["name"]+"<br>");
+	/*document.write(object.cost+"<br>");*/
+	document.write(object["cost"]+"<br>");
+	document.write(object["author"]+"<br>");
+	document.write(object["isbn"]+"<br>");
+	document.write(object["page"]+"<br>");
+
+
 </script>	
 </body>
 </html>
