@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<pre>
+	1=1
+	1+2=3
+	1+2+3=6
+	...
+	1+2+3+4+5+6+7+8+9+10 = 55
+
+	--------------------------
+	</pre>
+
+<script>
+	var sum = 0;
+	for(var i=1;i<=10;i++){
+		var left="";
+		for(var j=1;j<=i;j++){
+			left = left + j;
+			if(i!=j){left=left+"+"}
+			sum = sum+j;
+		}
+		document.write(left+"="+sum+"<br>");
+		sum=0;
+	}
+
+
+</script>	
+</body>
+</html>
