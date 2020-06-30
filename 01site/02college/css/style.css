@@ -280,5 +280,7 @@ div.last ul.slider02 span{color:#6a6a6a;
 						  font-size: 10px;
 						  }
 div.up{position: absolute;top: 0;right: 0;}						  
-div.down{position: absolute;bottom: 0;right: 0;}	
+div.down{position: absolute;bottom: 0;right: 0;}
+
+div.footer {width: 1200px;height: 150px;margin: 0 auto; padding-top: 25PX;}	
 
